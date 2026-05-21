@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About · Huntington Collision Center · Family Owned Since 2013</title>
+<meta name="description" content="Family-owned auto body shop on Long Island. Mike Sulek and his team have been straightening Huntington's cars on Jericho Turnpike since 2013." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-logo">HC<span style="color:var(--accent)">.</span></div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.06] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span data-en="Open today · 8AM–6PM" data-es="Abierto hoy · 8AM–6PM">Open today · 8AM–6PM</span></span>
+      <span>Huntington Station, NY</span>
+      <span data-en="24/7 Towing" data-es="Grúa 24/7">24/7 Towing</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+16314920123" class="hover:text-white">(631) 492-0123</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="display text-[1.6rem]">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="hidden md:block mono text-[.6rem] tracking-[.22em] uppercase text-white/40">Collision Center</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="about.html" class="nav-link active" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" data-open-quote class="hidden md:inline-flex btn btn-solid !py-3 !px-5 !text-[.68rem]" data-en="Get Quote" data-es="Cotizar">Get Quote</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.06] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+    <a href="about.html" class="nav-link active" data-en="About" data-es="Nosotros">About</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO HEADER -->
+<section class="relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+  <div class="absolute inset-0 spotlight"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="About · The shop on Jericho" data-es="Nosotros · El taller en Jericho">About · The shop on Jericho</div>
+      <h1 class="display text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
+          data-en="Family run. Long Island raised."
+          data-es="Familiar. De Long Island.">
+        Family run. <br/><span style="color:var(--accent)">Long Island raised.</span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="py-12 md:py-20 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-7 reveal">
+      <img src="https://images.unsplash.com/photo-1597254570797-1d6df5b8b87a?auto=format&fit=crop&w=1400&q=85" alt="Auto body shop interior" class="w-full aspect-[4/3] object-cover" />
+    </div>
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)" data-en="Our story" data-es="Nuestra historia">Our story</div>
+      <h2 class="display text-3xl md:text-4xl mt-4 leading-tight"
+          data-en="From a single bay to the busiest body shop on Jericho."
+          data-es="De un solo elevador al taller más activo de Jericho.">
+        From a single bay to the busiest body shop on Jericho.
+      </h2>
+      <div class="mt-6 space-y-4 text-white/70 leading-relaxed">
+        <p data-en="Mike Sulek opened Huntington Collision in 2013 with one frame rack, one paint gun and a deal with a friend's tow yard. He'd been working bodies on Long Island for fifteen years already — the deal was simple: take care of the car, take care of the customer, and pay the rent." data-es="Mike Sulek abrió Huntington Collision en 2013 con un solo rack de chasis, una pistola de pintura y un trato con la grúa de un amigo. Ya llevaba quince años trabajando carrocería en Long Island — el trato era simple: cuida el auto, cuida al cliente y paga la renta.">
+          Mike Sulek opened Huntington Collision in 2013 with one frame rack, one paint gun and a deal with a friend's tow yard. He'd been working bodies on Long Island for fifteen years already — the deal was simple: take care of the car, take care of the customer, and pay the rent.
+        </p>
+        <p data-en="Twelve years later we still answer the phone, still write estimates by hand on the first visit, and still hand the keys back with the car detailed. Some things you don't outgrow." data-es="Doce años después seguimos contestando el teléfono, seguimos escribiendo cotizaciones a mano en la primera visita y seguimos entregando el auto detallado. Algunas cosas no se cambian.">
+          Twelve years later we still answer the phone, still write estimates by hand on the first visit, and still hand the keys back with the car detailed. Some things you don't outgrow.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="How we work" data-es="Cómo trabajamos">How we work</div>
+      <h2 class="display text-4xl md:text-6xl mt-4 max-w-3xl"
+          data-en="Four things we don't compromise on."
+          data-es="Cuatro cosas en las que no transigimos.">
+        Four things we don't compromise on.
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 reveal-stagger">
+      <div class="card p-7">
+        <div class="step-num">01</div>
+        <div class="chrome-rule my-4"></div>
+        <h3 class="display text-xl mb-3" data-en="OEM-spec repair" data-es="Reparación OEM">OEM-spec repair</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="We follow the manufacturer's procedures, not the shortcut. Welds, sealers, primers — all to spec." data-es="Seguimos los procedimientos del fabricante, no el atajo. Soldaduras, selladores, primers — todo a especificación.">We follow the manufacturer's procedures, not the shortcut. Welds, sealers, primers — all to spec.</p>
+      </div>
+      <div class="card p-7">
+        <div class="step-num">02</div>
+        <div class="chrome-rule my-4"></div>
+        <h3 class="display text-xl mb-3" data-en="Honest estimate" data-es="Cotización honesta">Honest estimate</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="The number we write on day one is the number you pay on day done. If something changes mid-job, you hear from us first." data-es="El número que escribimos al inicio es el que pagas al final. Si algo cambia, te llamamos primero.">The number we write on day one is the number you pay on day done. If something changes mid-job, you hear from us first.</p>
+      </div>
+      <div class="card p-7">
+        <div class="step-num">03</div>
+        <div class="chrome-rule my-4"></div>
+        <h3 class="display text-xl mb-3" data-en="Direct with insurance" data-es="Directo con seguros">Direct with insurance</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="GEICO, Allstate, Progressive, State Farm, USAA, Liberty, Geico, Travelers — we file the photos and write the supplements ourselves." data-es="GEICO, Allstate, Progressive, State Farm, USAA, Liberty, Travelers — nosotros mandamos fotos y suplementos.">GEICO, Allstate, Progressive, State Farm, USAA, Liberty, Travelers — we file the photos and write the supplements ourselves.</p>
+      </div>
+      <div class="card p-7">
+        <div class="step-num">04</div>
+        <div class="chrome-rule my-4"></div>
+        <h3 class="display text-xl mb-3" data-en="Lifetime warranty" data-es="Garantía de por vida">Lifetime warranty</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="Workmanship on collision repairs is guaranteed for as long as you own the vehicle. We mean it." data-es="La mano de obra en reparaciones está garantizada mientras seas dueño del auto. Lo decimos en serio.">Workmanship on collision repairs is guaranteed for as long as you own the vehicle. We mean it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="py-20 md:py-28 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="The crew" data-es="El equipo">The crew</div>
+      <h2 class="display text-4xl md:text-6xl mt-4" data-en="The same faces, every visit." data-es="Las mismas caras, cada visita.">The same faces, every visit.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 md:gap-8 reveal-stagger">
+      <div class="card">
+        <div class="aspect-[3/4] bg-[#141416] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=85" alt="Mike Sulek" class="w-full h-full object-cover" style="filter:grayscale(.4) contrast(1.05);" />
+        </div>
+        <div class="p-6">
+          <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Owner · Founder" data-es="Dueño · Fundador">Owner · Founder</div>
+          <h3 class="display text-2xl mt-2">Mike Sulek</h3>
+          <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="Frame and structural. Twenty-seven years in body work — fifteen of them on Jericho." data-es="Chasis y estructura. Veintisiete años en carrocería — quince de ellos en Jericho.">Frame and structural. Twenty-seven years in body work — fifteen of them on Jericho.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="aspect-[3/4] bg-[#141416] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85" alt="Paint tech" class="w-full h-full object-cover" style="filter:grayscale(.4) contrast(1.05);" />
+        </div>
+        <div class="p-6">
+          <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Lead Painter" data-es="Pintor Jefe">Lead Painter</div>
+          <h3 class="display text-2xl mt-2">Carlos M.</h3>
+          <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="PPG-certified, color match wizard. Has blended panels on every major German marque." data-es="Certificado PPG, mago del color. Ha mezclado paneles en todas las marcas alemanas grandes.">PPG-certified, color match wizard. Has blended panels on every major German marque.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="aspect-[3/4] bg-[#141416] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=900&q=85" alt="Detail tech" class="w-full h-full object-cover" style="filter:grayscale(.4) contrast(1.05);" />
+        </div>
+        <div class="p-6">
+          <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Detail & Coating" data-es="Detallado y Cerámico">Detail & Coating</div>
+          <h3 class="display text-2xl mt-2">Anthony R.</h3>
+          <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="Paint correction and ceramic specialist. Detail certifications from Gtechniq, IGL and CarPro." data-es="Especialista en corrección y cerámico. Certificaciones de Gtechniq, IGL y CarPro.">Paint correction and ceramic specialist. Detail certifications from Gtechniq, IGL and CarPro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12 md:mb-16">
+      <div class="eyebrow" data-en="By the numbers" data-es="En números">By the numbers</div>
+      <h2 class="display text-4xl md:text-6xl mt-4" data-en="A decade on Jericho." data-es="Una década en Jericho.">A decade on Jericho.</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 reveal-stagger">
+      <div>
+        <div class="display text-5xl md:text-7xl">12<span style="color:var(--accent)">y</span></div>
+        <div class="eyebrow mt-3" data-en="On Jericho Turnpike" data-es="En Jericho Turnpike">On Jericho Turnpike</div>
+      </div>
+      <div>
+        <div class="display text-5xl md:text-7xl">8,200<span style="color:var(--accent)">+</span></div>
+        <div class="eyebrow mt-3" data-en="Cars repaired" data-es="Autos reparados">Cars repaired</div>
+      </div>
+      <div>
+        <div class="display text-5xl md:text-7xl">4.8<span style="color:var(--accent)">★</span></div>
+        <div class="eyebrow mt-3" data-en="127 reviews" data-es="127 reseñas">127 reviews</div>
+      </div>
+      <div>
+        <div class="display text-5xl md:text-7xl">24/7</div>
+        <div class="eyebrow mt-3" data-en="Tow service" data-es="Servicio de grúa">Tow service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-32 border-t border-white/[.06]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="Come say hi" data-es="Pásate a saludar">Come say hi</div>
+    <h2 class="display text-4xl md:text-6xl mt-4" data-en="The garage is open. So is the coffee." data-es="El taller está abierto. El café también.">The garage is open. So is the coffee.</h2>
+    <p class="mt-5 text-white/70" data-en="Walk-ins welcome. Estimates always free." data-es="Sin cita necesaria. Cotización siempre gratis.">Walk-ins welcome. Estimates always free.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="contact.html" class="btn btn-solid" data-en="Plan your visit" data-es="Visítanos">Plan your visit</a>
+      <a href="tel:+16314920123" class="btn btn-line">(631) 492-0123</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.06] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-white" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-white" data-en="Services" data-es="Servicios">Services</a>
+      <a href="gallery.html" class="hover:text-white" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="contact.html" class="hover:text-white" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+16314920123" class="btn-solid">Call</a>
+  <a href="contact.html" class="btn-line border border-white/15 text-white" data-en="Visit" data-es="Visítanos">Visit</a>
+</div>
+
+<div id="quoteModal" class="modal-bg">
+  <div class="modal-card">
+    <button class="modal-close" data-close-quote>×</button>
+    <div class="eyebrow" data-en="Free estimate" data-es="Cotización gratis">Free estimate</div>
+    <h3 class="display text-2xl mt-3 mb-6" data-en="Send a few photos. We'll take it from there." data-es="Envía unas fotos. Nosotros nos encargamos.">Send a few photos. We'll take it from there.</h3>
+    <form data-fake class="space-y-5">
+      <div><span class="label" data-en="Name" data-es="Nombre">Name</span><input class="input" required /></div>
+      <div class="grid grid-cols-2 gap-5">
+        <div><span class="label" data-en="Phone" data-es="Teléfono">Phone</span><input class="input" type="tel" required /></div>
+        <div><span class="label" data-en="Vehicle" data-es="Vehículo">Vehicle</span><input class="input" /></div>
+      </div>
+      <div><span class="label" data-en="What happened" data-es="Qué pasó">What happened</span><textarea class="input" rows="3"></textarea></div>
+      <button class="btn btn-solid w-full" data-en="Send" data-es="Enviar">Send</button>
+      <div data-form-result class="hidden text-[var(--accent-2)] text-sm mono tracking-wide pt-2"></div>
+    </form>
+  </div>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

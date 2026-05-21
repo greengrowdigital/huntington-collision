@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery · Huntington Collision Center · Real Work, Real Cars</title>
+<meta name="description" content="Before-and-after photos from our shop. Real cars, real customers, real Long Island repairs by Huntington Collision Center." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-logo">HC<span style="color:var(--accent)">.</span></div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.06] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span data-en="Open today · 8AM–6PM" data-es="Abierto hoy · 8AM–6PM">Open today · 8AM–6PM</span></span>
+      <span>Huntington Station, NY</span>
+      <span data-en="24/7 Towing" data-es="Grúa 24/7">24/7 Towing</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+16314920123" class="hover:text-white">(631) 492-0123</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="display text-[1.6rem]">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="hidden md:block mono text-[.6rem] tracking-[.22em] uppercase text-white/40">Collision Center</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="gallery.html" class="nav-link active" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="about.html" class="nav-link" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" data-open-quote class="hidden md:inline-flex btn btn-solid !py-3 !px-5 !text-[.68rem]" data-en="Get Quote" data-es="Cotizar">Get Quote</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.06] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="gallery.html" class="nav-link active" data-en="Gallery" data-es="Galería">Gallery</a>
+    <a href="about.html" class="nav-link" data-en="About" data-es="Nosotros">About</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-32 pb-12 md:pb-20">
+  <div class="absolute inset-0 spotlight"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Gallery · Real work" data-es="Galería · Trabajo real">Gallery · Real work</div>
+      <h1 class="display text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
+          data-en="The wreck. The work. The result."
+          data-es="El choque. El trabajo. El resultado.">
+        The wreck. The work. <span style="color:var(--accent)">The result.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-white/70 leading-relaxed"
+         data-en="Pulled straight from our intake camera and delivery booth. No filters. Drag the handles to see what an honest day at Huntington Collision looks like."
+         data-es="Sacadas directo de nuestra cámara de entrada y cabina de entrega. Sin filtros. Arrastra los controles para ver un día honesto en Huntington Collision.">
+        Pulled straight from our intake camera and delivery booth. No filters. Drag the handles to see what an honest day at Huntington Collision looks like.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- B/A SLIDERS -->
+<section class="py-12 md:py-16">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 space-y-12 md:space-y-20">
+
+    <div class="reveal">
+      <div class="grid md:grid-cols-12 gap-6 mb-6 items-end">
+        <div class="md:col-span-8">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase" style="color:var(--accent)">Case 01 · Collision</div>
+          <h2 class="display text-3xl md:text-4xl mt-2" data-en="BMW 3-Series · front-end" data-es="BMW Serie 3 · frontal">BMW 3-Series · front-end</h2>
+        </div>
+        <div class="md:col-span-4 md:text-right text-white/55 text-sm">
+          <div class="mono text-[.66rem] tracking-[.22em] uppercase">GEICO · 9 days</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ba-slider">
+          <img src="https://images.unsplash.com/photo-1597007030739-6d2e7172ee6c?auto=format&fit=crop&w=2000&q=85" alt="Before" />
+          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=2000&q=85" class="ba-after" alt="After" />
+          <div class="ba-handle"></div>
+          <div class="ba-label" style="left:1rem" data-en="Before" data-es="Antes">Before</div>
+          <div class="ba-label" style="right:1rem" data-en="After" data-es="Después">After</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="grid md:grid-cols-12 gap-6 mb-6 items-end">
+        <div class="md:col-span-8">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase" style="color:var(--accent)">Case 02 · Paint Correction</div>
+          <h2 class="display text-3xl md:text-4xl mt-2" data-en="Audi RS5 · ceramic + correction" data-es="Audi RS5 · cerámico + corrección">Audi RS5 · ceramic + correction</h2>
+        </div>
+        <div class="md:col-span-4 md:text-right text-white/55 text-sm">
+          <div class="mono text-[.66rem] tracking-[.22em] uppercase">Customer pay · 3 days</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ba-slider">
+          <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=2000&q=85" alt="Before" />
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85" class="ba-after" alt="After" />
+          <div class="ba-handle"></div>
+          <div class="ba-label" style="left:1rem" data-en="Before" data-es="Antes">Before</div>
+          <div class="ba-label" style="right:1rem" data-en="After" data-es="Después">After</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="grid md:grid-cols-12 gap-6 mb-6 items-end">
+        <div class="md:col-span-8">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase" style="color:var(--accent)">Case 03 · Wrap</div>
+          <h2 class="display text-3xl md:text-4xl mt-2" data-en="Mercedes G-Wagon · satin black" data-es="Mercedes G · negro satinado">Mercedes G-Wagon · satin black</h2>
+        </div>
+        <div class="md:col-span-4 md:text-right text-white/55 text-sm">
+          <div class="mono text-[.66rem] tracking-[.22em] uppercase">Customer pay · 5 days</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ba-slider">
+          <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=2000&q=85" alt="Before" />
+          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=2000&q=85" class="ba-after" alt="After" />
+          <div class="ba-handle"></div>
+          <div class="ba-label" style="left:1rem" data-en="Before" data-es="Antes">Before</div>
+          <div class="ba-label" style="right:1rem" data-en="After" data-es="Después">After</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY GRID -->
+<section class="py-16 md:py-24 border-t border-white/[.06] mt-16 md:mt-24">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="The shop · The crew · The cars" data-es="El taller · La gente · Los autos">The shop · The crew · The cars</div>
+      <h2 class="display text-4xl md:text-6xl mt-4" data-en="On the floor at 99 E. Jericho." data-es="En el piso del 99 E. Jericho.">On the floor at 99 E. Jericho.</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 reveal-stagger">
+      <div class="gal-item aspect-square md:row-span-2 md:aspect-auto">
+        <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=900&q=85" alt="Paint booth" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Paint booth</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=85" alt="Audi finished" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Ceramic finish</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=85" alt="Wrap" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Satin wrap</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=85" alt="Frame work" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Frame work</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85" alt="Detail" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Polish stage</span></div>
+      </div>
+      <div class="gal-item aspect-square md:col-span-2">
+        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=1400&q=85" alt="G-wagon" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">G-Wagon · delivery</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=900&q=85" alt="Hand wax" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Hand wax</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1490902931801-d6f80ca94fe4?auto=format&fit=crop&w=900&q=85" alt="Tire bay" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Tire bay</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=85" alt="Wheel detail" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Wheel detail</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=900&q=85" alt="Headlight resto" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Headlight resto</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?auto=format&fit=crop&w=900&q=85" alt="Black car detail" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Final inspection</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-32 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="Want yours next?" data-es="¿Quieres que el tuyo sea el próximo?">Want yours next?</div>
+    <h2 class="display text-4xl md:text-6xl mt-4" data-en="Send us a photo of your car." data-es="Mándanos una foto de tu carro.">Send us a photo of your car.</h2>
+    <p class="mt-5 text-white/70" data-en="We'll write the estimate. You decide. Either way, the consult is on us." data-es="Hacemos la cotización. Tú decides. De cualquier forma, la consulta es gratis.">We'll write the estimate. You decide. Either way, the consult is on us.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#" data-open-quote class="btn btn-solid" data-en="Free quote" data-es="Cotización gratis">Free quote</a>
+      <a href="tel:+16314920123" class="btn btn-line">(631) 492-0123</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.06] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-white" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-white" data-en="Services" data-es="Servicios">Services</a>
+      <a href="about.html" class="hover:text-white" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" class="hover:text-white" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+16314920123" class="btn-solid">Call</a>
+  <a href="#" data-open-quote class="btn-line border border-white/15 text-white" data-en="Free quote" data-es="Cotizar">Free quote</a>
+</div>
+
+<div id="quoteModal" class="modal-bg">
+  <div class="modal-card">
+    <button class="modal-close" data-close-quote>×</button>
+    <div class="eyebrow" data-en="Free estimate" data-es="Cotización gratis">Free estimate</div>
+    <h3 class="display text-2xl mt-3 mb-6" data-en="Send a few photos. We'll take it from there." data-es="Envía unas fotos. Nosotros nos encargamos.">Send a few photos. We'll take it from there.</h3>
+    <form data-fake class="space-y-5">
+      <div>
+        <span class="label" data-en="Name" data-es="Nombre">Name</span>
+        <input class="input" required />
+      </div>
+      <div class="grid grid-cols-2 gap-5">
+        <div>
+          <span class="label" data-en="Phone" data-es="Teléfono">Phone</span>
+          <input class="input" type="tel" required placeholder="(631) ..." />
+        </div>
+        <div>
+          <span class="label" data-en="Vehicle" data-es="Vehículo">Vehicle</span>
+          <input class="input" data-en-placeholder="Year · Make · Model" data-es-placeholder="Año · Marca · Modelo" />
+        </div>
+      </div>
+      <div>
+        <span class="label" data-en="What happened" data-es="Qué pasó">What happened</span>
+        <textarea class="input" rows="3"></textarea>
+      </div>
+      <button class="btn btn-solid w-full" data-en="Send · Get my estimate" data-es="Enviar · Obtener cotización">Send · Get my estimate</button>
+      <div data-form-result class="hidden text-[var(--accent-2)] text-sm mono tracking-wide pt-2"></div>
+    </form>
+  </div>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

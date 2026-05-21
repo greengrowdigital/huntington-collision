@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services · Huntington Collision Center · Auto Body, Paint, PPF, Detail</title>
+<meta name="description" content="Full-service auto body and detail center. Collision repair, paint, PPF, ceramic, detailing, wraps, tires, mechanical, 24/7 towing. Huntington Station, NY." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-logo">HC<span style="color:var(--accent)">.</span></div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.06] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span data-en="Open today · 8AM–6PM" data-es="Abierto hoy · 8AM–6PM">Open today · 8AM–6PM</span></span>
+      <span>Huntington Station, NY</span>
+      <span data-en="24/7 Towing" data-es="Grúa 24/7">24/7 Towing</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+16314920123" class="hover:text-white">(631) 492-0123</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="display text-[1.6rem]">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="hidden md:block mono text-[.6rem] tracking-[.22em] uppercase text-white/40">Collision Center</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link active" data-en="Services" data-es="Servicios">Services</a>
+      <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="about.html" class="nav-link" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" data-open-quote class="hidden md:inline-flex btn btn-solid !py-3 !px-5 !text-[.68rem]" data-en="Get Quote" data-es="Cotizar">Get Quote</a>
+      <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.06] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link active" data-en="Services" data-es="Servicios">Services</a>
+    <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+    <a href="about.html" class="nav-link" data-en="About" data-es="Nosotros">About</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+  <div class="absolute inset-0 spotlight"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Services · Catalog" data-es="Servicios · Catálogo">Services · Catalog</div>
+      <h1 class="display text-5xl md:text-8xl mt-5 leading-[.95]"
+          data-en="Everything your car needs. Under one roof."
+          data-es="Todo lo que tu auto necesita. Bajo un mismo techo.">
+        Everything your car needs.<br/><span style="color:var(--accent)">Under one roof.</span>
+      </h1>
+      <div class="mt-10 grid md:grid-cols-3 gap-6 max-w-4xl">
+        <a href="#collision" class="card p-5 hover:border-white/30 transition-all">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">01</div>
+          <div class="display text-xl mt-2" data-en="Collision" data-es="Colisión">Collision</div>
+        </a>
+        <a href="#paint" class="card p-5 hover:border-white/30 transition-all">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">02</div>
+          <div class="display text-xl mt-2" data-en="Paint & Body" data-es="Pintura">Paint & Body</div>
+        </a>
+        <a href="#ppf" class="card p-5 hover:border-white/30 transition-all">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">03</div>
+          <div class="display text-xl mt-2" data-en="PPF · Ceramic" data-es="PPF · Cerámico">PPF · Ceramic</div>
+        </a>
+        <a href="#detail" class="card p-5 hover:border-white/30 transition-all">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">04</div>
+          <div class="display text-xl mt-2" data-en="Detail" data-es="Detallado">Detail</div>
+        </a>
+        <a href="#wraps" class="card p-5 hover:border-white/30 transition-all">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">05</div>
+          <div class="display text-xl mt-2" data-en="Wraps · Style" data-es="Vinilos">Wraps · Style</div>
+        </a>
+        <a href="#mechanical" class="card p-5 hover:border-white/30 transition-all">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">06</div>
+          <div class="display text-xl mt-2" data-en="Mechanical · Tires" data-es="Mecánica">Mechanical · Tires</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLISION -->
+<section id="collision" class="py-20 md:py-28 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)">01 / Collision Repair</div>
+      <h2 class="display text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Frame-up restoration. Factory-spec welds."
+          data-es="Restauración desde el chasis. Soldadura de fábrica.">
+        Frame-up restoration. Factory-spec welds.
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="From a fender-bender to a full structural rebuild, we follow OEM repair procedures. Our frame rack and measuring system catches the tenths of a degree that other shops miss."
+         data-es="Desde un raspón hasta una reconstrucción estructural, seguimos los procedimientos OEM. Nuestro rack y sistema de medición captura las décimas de grado que otros talleres pasan por alto.">
+        From a fender-bender to a full structural rebuild, we follow OEM repair procedures. Our frame rack and measuring system catches the tenths of a degree that other shops miss.
+      </p>
+      <a href="#" data-open-quote class="btn btn-line mt-8 inline-flex" data-en="Free estimate" data-es="Cotización gratis">Free estimate</a>
+    </div>
+    <div class="md:col-span-7 reveal">
+      <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=85" alt="Collision frame repair" class="w-full aspect-[4/3] object-cover" />
+      <div class="grid grid-cols-2 gap-5 mt-6">
+        <div class="card p-5">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mb-2" data-en="What's included" data-es="Incluye">What's included</div>
+          <ul class="text-white/75 text-sm space-y-2 list-disc pl-4">
+            <li data-en="Structural & frame straightening" data-es="Enderezamiento de chasis">Structural & frame straightening</li>
+            <li data-en="Panel replacement & welding" data-es="Reemplazo de paneles y soldadura">Panel replacement & welding</li>
+            <li data-en="Bumper, fender, hood, quarter" data-es="Bumper, guardafango, cofre, cuarto">Bumper, fender, hood, quarter</li>
+            <li data-en="Wheel alignment after repair" data-es="Alineación post-reparación">Wheel alignment after repair</li>
+          </ul>
+        </div>
+        <div class="card p-5">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mb-2" data-en="Insurance" data-es="Seguro">Insurance</div>
+          <ul class="text-white/75 text-sm space-y-2 list-disc pl-4">
+            <li data-en="All major carriers" data-es="Todas las aseguradoras">All major carriers</li>
+            <li data-en="Direct billing & paperwork" data-es="Facturación directa">Direct billing & paperwork</li>
+            <li data-en="Deductible assistance" data-es="Ayuda con el deducible">Deductible assistance</li>
+            <li data-en="Rental car coordination" data-es="Coordinación de renta">Rental car coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAINT -->
+<section id="paint" class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-7 md:order-1 order-2 reveal">
+      <img src="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?auto=format&fit=crop&w=1400&q=85" alt="Paint booth" class="w-full aspect-[4/3] object-cover" />
+      <div class="grid grid-cols-2 gap-5 mt-6">
+        <div class="card p-5">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mb-2" data-en="Process" data-es="Proceso">Process</div>
+          <ul class="text-white/75 text-sm space-y-2 list-disc pl-4">
+            <li data-en="Downdraft heated booth" data-es="Cabina downdraft con calor">Downdraft heated booth</li>
+            <li data-en="Computerized color match" data-es="Color computarizado">Computerized color match</li>
+            <li data-en="Base / clear / blend" data-es="Base / barniz / mezcla">Base / clear / blend</li>
+            <li data-en="Post-cure polish" data-es="Pulido post-curado">Post-cure polish</li>
+          </ul>
+        </div>
+        <div class="card p-5">
+          <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mb-2" data-en="Materials" data-es="Materiales">Materials</div>
+          <ul class="text-white/75 text-sm space-y-2 list-disc pl-4">
+            <li>PPG · Sikkens · BASF</li>
+            <li data-en="OEM color codes" data-es="Códigos OEM">OEM color codes</li>
+            <li data-en="Waterborne available" data-es="Base agua disponible">Waterborne available</li>
+            <li data-en="UV-stable clearcoat" data-es="Barniz UV-estable">UV-stable clearcoat</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="md:col-span-5 md:order-2 order-1 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)">02 / Paint & Body</div>
+      <h2 class="display text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="A factory finish. Indistinguishable, by eye."
+          data-es="Acabado de fábrica. Imperceptible al ojo.">
+        A factory finish. Indistinguishable, by eye.
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Heated downdraft booth. Computerized color formulation. Blended panels so even a body-shop owner couldn't tell where the repair starts. Single-panel touch-ups, full repaints, and color changes."
+         data-es="Cabina downdraft con calor. Color computarizado. Mezcla de paneles tan precisa que ni un dueño de taller distinguiría dónde empieza la reparación. Retoques de un panel, repintado completo o cambio de color.">
+        Heated downdraft booth. Computerized color formulation. Blended panels so even a body-shop owner couldn't tell where the repair starts. Single-panel touch-ups, full repaints, and color changes.
+      </p>
+      <a href="#" data-open-quote class="btn btn-line mt-8 inline-flex" data-en="Request a color match" data-es="Pedir color">Request a color match</a>
+    </div>
+  </div>
+</section>
+
+<!-- PPF -->
+<section id="ppf" class="py-20 md:py-28 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)">03 / Paint Protection</div>
+      <h2 class="display text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Lock in factory shine. For years."
+          data-es="Sella el brillo de fábrica. Por años.">
+        Lock in factory shine. For years.
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Paint Protection Film is the only way to stop a rock chip before it happens. Ceramic coating adds the gloss and the easy-clean — together, they're how new cars stay looking new on Long Island salt and sand."
+         data-es="El PPF es la única forma de detener una piedra antes de que pegue. El cerámico añade brillo y facilidad de lavado — juntos, así se mantienen nuevos los autos contra la sal y arena de Long Island.">
+        Paint Protection Film is the only way to stop a rock chip before it happens. Ceramic coating adds the gloss and the easy-clean — together, they're how new cars stay looking new on Long Island salt and sand.
+      </p>
+    </div>
+    <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5 reveal-stagger">
+      <div class="svc-card p-7">
+        <div class="num">PPF · Full / Partial</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Paint Protection Film" data-es="Película Protectora">Paint Protection Film</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="Self-healing TPU film for hood, fenders, mirrors and full body. 10-year warranty." data-es="Película TPU autorreparable para cofre, guardafangos, espejos y cuerpo completo. Garantía 10 años.">Self-healing TPU film for hood, fenders, mirrors and full body. 10-year warranty.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Ceramic Coating</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="9H Nano Ceramic" data-es="Cerámico Nano 9H">9H Nano Ceramic</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="Hydrophobic, UV-stable nano-ceramic. 3, 5 and 7-year packages. Includes prep + paint correction." data-es="Cerámico hidrofóbico y UV-estable. Paquetes de 3, 5 y 7 años. Incluye prep y corrección de pintura.">Hydrophobic, UV-stable nano-ceramic. 3, 5 and 7-year packages. Includes prep + paint correction.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Window Tint</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Ceramic Window Film" data-es="Vidrios Polarizados">Ceramic Window Film</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="Heat-rejecting ceramic films. Lifetime warranty. NY-legal VLT options for front, side and rear." data-es="Películas cerámicas que rechazan calor. Garantía de por vida. Tonos legales en NY para frontal, lateral y trasero.">Heat-rejecting ceramic films. Lifetime warranty. NY-legal VLT options for front, side and rear.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Paint Correction</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Multi-Stage Polish" data-es="Pulido Multi-etapa">Multi-Stage Polish</h3>
+        <p class="text-white/65 text-sm leading-relaxed" data-en="Swirl removal, oxidation, holograms. 1-, 2- or 3-stage correction with Rupes pads." data-es="Eliminación de remolinos, oxidación, hologramas. Corrección 1, 2 o 3 etapas con pads Rupes.">Swirl removal, oxidation, holograms. 1-, 2- or 3-stage correction with Rupes pads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL -->
+<section id="detail" class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="grid md:grid-cols-12 gap-10 md:gap-16 mb-12 reveal">
+      <div class="md:col-span-7">
+        <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)">04 / Detailing</div>
+        <h2 class="display text-4xl md:text-6xl mt-5 leading-[.95]"
+            data-en="Show-floor detailing. Inside and out."
+            data-es="Detallado de exhibición. Por dentro y por fuera.">
+          Show-floor detailing. Inside and out.
+        </h2>
+      </div>
+      <p class="md:col-span-5 text-white/70 leading-relaxed"
+         data-en="Hand wash, two-bucket method, decontamination, polish, sealant. Interior steam-clean, leather conditioning, headliner refresh. Every detail finished by hand."
+         data-es="Lavado a mano, método de dos cubetas, descontaminación, pulido, sellado. Interior con vapor, hidratación de cuero, refresco de techo. Cada detalle terminado a mano.">
+        Hand wash, two-bucket method, decontamination, polish, sealant. Interior steam-clean, leather conditioning, headliner refresh. Every detail finished by hand.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
+      <div class="card p-7">
+        <div class="display text-3xl">$149<span class="text-base text-white/40">+</span></div>
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Express Detail" data-es="Detallado Express">Express Detail</div>
+        <ul class="mt-6 text-white/75 text-sm space-y-2 list-disc pl-4">
+          <li data-en="Hand wash + clay" data-es="Lavado a mano + clay">Hand wash + clay</li>
+          <li data-en="Interior vacuum + wipe" data-es="Aspirado interior y limpieza">Interior vacuum + wipe</li>
+          <li data-en="Wheels & tires dressed" data-es="Llantas y rines">Wheels & tires dressed</li>
+          <li data-en="6-month spray sealant" data-es="Sellante spray 6 meses">6-month spray sealant</li>
+        </ul>
+      </div>
+      <div class="card p-7" style="border-color:var(--accent)">
+        <div class="tape mb-4" style="transform:none" data-en="Most chosen" data-es="Más elegido">Most chosen</div>
+        <div class="display text-3xl">$349<span class="text-base text-white/40">+</span></div>
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Full Detail" data-es="Detallado Completo">Full Detail</div>
+        <ul class="mt-6 text-white/75 text-sm space-y-2 list-disc pl-4">
+          <li data-en="All Express +" data-es="Todo lo Express +">All Express +</li>
+          <li data-en="Interior steam + extraction" data-es="Vapor + extracción interior">Interior steam + extraction</li>
+          <li data-en="Leather clean + condition" data-es="Cuero limpio e hidratado">Leather clean + condition</li>
+          <li data-en="1-stage hand polish" data-es="Pulido a mano 1 etapa">1-stage hand polish</li>
+          <li data-en="12-month ceramic sealant" data-es="Sellante cerámico 12 meses">12-month ceramic sealant</li>
+        </ul>
+      </div>
+      <div class="card p-7">
+        <div class="display text-3xl">$849<span class="text-base text-white/40">+</span></div>
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="New-Car Package" data-es="Paquete Auto Nuevo">New-Car Package</div>
+        <ul class="mt-6 text-white/75 text-sm space-y-2 list-disc pl-4">
+          <li data-en="Full paint correction" data-es="Corrección de pintura">Full paint correction</li>
+          <li data-en="3-year ceramic coating" data-es="Cerámico 3 años">3-year ceramic coating</li>
+          <li data-en="Headlight restoration" data-es="Restauración de faros">Headlight restoration</li>
+          <li data-en="Engine bay detail" data-es="Detallado del motor">Engine bay detail</li>
+          <li data-en="Premium interior treatment" data-es="Tratamiento interior premium">Premium interior treatment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WRAPS -->
+<section id="wraps" class="py-20 md:py-28 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)">05 / Wraps & Style</div>
+      <h2 class="display text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Make it yours. Without touching the paint."
+          data-es="Hazlo tuyo. Sin tocar la pintura.">
+        Make it yours. Without touching the paint.
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Vinyl wraps come off when you sell — or change color twice a year if you want. Starlight headliners turn any car into a Rolls. We do both."
+         data-es="Los vinilos salen cuando vendes — o cambia color dos veces al año si quieres. Los starlights convierten cualquier carro en un Rolls. Hacemos los dos.">
+        Vinyl wraps come off when you sell — or change color twice a year if you want. Starlight headliners turn any car into a Rolls. We do both.
+      </p>
+    </div>
+    <div class="md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-5 reveal-stagger">
+      <div class="svc-card p-7">
+        <div class="num">Full Color Change</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Vinyl Wrap" data-es="Vinilo Completo">Vinyl Wrap</h3>
+        <p class="text-white/65 text-sm" data-en="3M, Avery, Inozetek. Matte, satin, gloss, chrome, color-shift." data-es="3M, Avery, Inozetek. Mate, satinado, brillo, cromo, color cambiante.">3M, Avery, Inozetek. Matte, satin, gloss, chrome, color-shift.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Starlight</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Fiber-Optic Headliner" data-es="Cielo Estrellado">Fiber-Optic Headliner</h3>
+        <p class="text-white/65 text-sm" data-en="200–800 fiber points. Solid color or shooting-star patterns. Bluetooth controller." data-es="200 a 800 puntos. Color sólido o estrella fugaz. Control por Bluetooth.">200–800 fiber points. Solid color or shooting-star patterns. Bluetooth controller.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Decals · Graphics</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Vehicle Graphics" data-es="Gráficos Vehiculares">Vehicle Graphics</h3>
+        <p class="text-white/65 text-sm" data-en="Race stripes, lettering, business branding. Cut, printed or layered." data-es="Líneas de carrera, letras, branding comercial. Cortado, impreso o por capas.">Race stripes, lettering, business branding. Cut, printed or layered.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Chrome Delete</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Trim Blackout" data-es="Trim en Negro">Trim Blackout</h3>
+        <p class="text-white/65 text-sm" data-en="Window trim, badges, mirrors, grille. Murdered-out look in a day." data-es="Marcos, emblemas, espejos, parrilla. Look murdered-out en un día.">Window trim, badges, mirrors, grille. Murdered-out look in a day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANICAL -->
+<section id="mechanical" class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-7 reveal">
+      <img src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1400&q=85" alt="Mechanical service" class="w-full aspect-[4/3] object-cover" />
+    </div>
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)">06 / Mechanical · Tires</div>
+      <h2 class="display text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Bring the car. We'll keep it running."
+          data-es="Trae el carro. Nosotros lo mantenemos andando.">
+        Bring the car. We'll keep it running.
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Brakes, suspension, alignment, tires, oil, batteries, A/C, diagnostics. State inspection on site. NY DMV registered."
+         data-es="Frenos, suspensión, alineación, llantas, aceite, baterías, A/C, diagnóstico. Inspección estatal en sitio. Registrados en NY DMV.">
+        Brakes, suspension, alignment, tires, oil, batteries, A/C, diagnostics. State inspection on site. NY DMV registered.
+      </p>
+      <ul class="mt-8 grid grid-cols-2 gap-x-4 gap-y-3 text-white/75 text-sm">
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="Brakes & rotors" data-es="Frenos y discos">Brakes & rotors</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="Suspension" data-es="Suspensión">Suspension</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="Wheel alignment" data-es="Alineación">Wheel alignment</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="Tire mount + balance" data-es="Llantas + balanceo">Tire mount + balance</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="Oil & fluids" data-es="Aceite y fluidos">Oil & fluids</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="A/C service" data-es="A/C">A/C service</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="Batteries" data-es="Baterías">Batteries</span></li>
+        <li class="flex items-center gap-2"><span class="dot" style="background:var(--accent)"></span><span data-en="NY State Inspection" data-es="Inspección NY">NY State Inspection</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="py-20 md:py-28 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Also at the shop" data-es="También en el taller">Also at the shop</div>
+      <h2 class="display text-4xl md:text-6xl mt-4" data-en="The extras that turn a body shop into a one-stop." data-es="Los extras que convierten un taller en un solo lugar.">The extras that turn a body shop into a one-stop.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 mt-12 reveal-stagger">
+      <div class="svc-card p-7">
+        <div class="num" data-en="24/7 · Anywhere on LI" data-es="24/7 · Todo Long Island">24/7 · Anywhere on LI</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Towing Service" data-es="Servicio de Grúa">Towing Service</h3>
+        <p class="text-white/65 text-sm" data-en="Flatbed, lockouts, jump-starts, fuel delivery. One call to (631) 492-0123." data-es="Plataforma, cerraduras, batería, combustible. Una llamada al (631) 492-0123.">Flatbed, lockouts, jump-starts, fuel delivery. One call to (631) 492-0123.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="From $39/day" data-es="Desde $39/día">From $39/day</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Loaner & Rentals" data-es="Renta de Auto">Loaner & Rentals</h3>
+        <p class="text-white/65 text-sm" data-en="Stay mobile while your car is in repair. We coordinate with Enterprise next door — or hand you keys to a loaner." data-es="Sigue moviéndote mientras reparamos tu auto. Coordinamos con Enterprise al lado — o te damos un loaner.">Stay mobile while your car is in repair. We coordinate with Enterprise next door — or hand you keys to a loaner.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="On-site · DMV approved" data-es="En sitio · DMV">On-site · DMV approved</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="State Inspection" data-es="Inspección Estatal">State Inspection</h3>
+        <p class="text-white/65 text-sm" data-en="NY State safety + emissions. While-you-wait, usually under 30 minutes." data-es="Seguridad + emisiones de NY. Mientras esperas, normalmente menos de 30 minutos.">NY State safety + emissions. While-you-wait, usually under 30 minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-32 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="One call. One shop." data-es="Una llamada. Un taller.">One call. One shop.</div>
+    <h2 class="display text-4xl md:text-6xl mt-4" data-en="Not sure what you need?" data-es="¿No sabes qué necesitas?">Not sure what you need?</h2>
+    <p class="mt-5 text-white/70" data-en="Tell us what happened. We'll tell you what it'll take, what it'll cost and how long it'll take." data-es="Cuéntanos qué pasó. Te decimos qué se necesita, cuánto cuesta y cuánto tarda.">Tell us what happened. We'll tell you what it'll take, what it'll cost and how long it'll take.</p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#" data-open-quote class="btn btn-solid" data-en="Send photos · Free quote" data-es="Enviar fotos · Cotización gratis">Send photos · Free quote</a>
+      <a href="tel:+16314920123" class="btn btn-line">(631) 492-0123</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.06] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-white" data-en="Home" data-es="Inicio">Home</a>
+      <a href="gallery.html" class="hover:text-white" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="about.html" class="hover:text-white" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" class="hover:text-white" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+16314920123" class="btn-solid">Call</a>
+  <a href="#" data-open-quote class="btn-line border border-white/15 text-white" data-en="Free quote" data-es="Cotizar">Free quote</a>
+</div>
+
+<div id="quoteModal" class="modal-bg">
+  <div class="modal-card">
+    <button class="modal-close" data-close-quote aria-label="Close">×</button>
+    <div class="eyebrow" data-en="Free estimate" data-es="Cotización gratis">Free estimate</div>
+    <h3 class="display text-2xl mt-3 mb-6" data-en="Send a few photos. We'll take it from there." data-es="Envía unas fotos. Nosotros nos encargamos.">Send a few photos. We'll take it from there.</h3>
+    <form data-fake class="space-y-5">
+      <div>
+        <span class="label" data-en="Name" data-es="Nombre">Name</span>
+        <input class="input" required data-en-placeholder="Your full name" data-es-placeholder="Tu nombre completo" />
+      </div>
+      <div class="grid grid-cols-2 gap-5">
+        <div>
+          <span class="label" data-en="Phone" data-es="Teléfono">Phone</span>
+          <input class="input" type="tel" required placeholder="(631) ..." />
+        </div>
+        <div>
+          <span class="label" data-en="Vehicle" data-es="Vehículo">Vehicle</span>
+          <input class="input" data-en-placeholder="Year · Make · Model" data-es-placeholder="Año · Marca · Modelo" />
+        </div>
+      </div>
+      <div>
+        <span class="label" data-en="What happened" data-es="Qué pasó">What happened</span>
+        <textarea class="input" rows="3" data-en-placeholder="Brief description" data-es-placeholder="Descripción breve"></textarea>
+      </div>
+      <button class="btn btn-solid w-full" data-en="Send · Get my estimate" data-es="Enviar · Obtener cotización">Send · Get my estimate</button>
+      <div data-form-result class="hidden text-[var(--accent-2)] text-sm mono tracking-wide pt-2"></div>
+    </form>
+  </div>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

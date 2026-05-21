@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact · Huntington Collision Center · 99 E. Jericho Tpke · (631) 492-0123</title>
+<meta name="description" content="Visit Huntington Collision at 99 E. Jericho Turnpike, Huntington Station NY. Call (631) 492-0123 for 24/7 towing or a free estimate." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-logo">HC<span style="color:var(--accent)">.</span></div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.06] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span data-en="Open today · 8AM–6PM" data-es="Abierto hoy · 8AM–6PM">Open today · 8AM–6PM</span></span>
+      <span>Huntington Station, NY</span>
+      <span data-en="24/7 Towing" data-es="Grúa 24/7">24/7 Towing</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+16314920123" class="hover:text-white">(631) 492-0123</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="display text-[1.6rem]">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="hidden md:block mono text-[.6rem] tracking-[.22em] uppercase text-white/40">Collision Center</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="about.html" class="nav-link" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" class="nav-link active" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+16314920123" class="hidden md:inline-flex btn btn-solid !py-3 !px-5 !text-[.68rem]">(631) 492-0123</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.06] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+    <a href="about.html" class="nav-link" data-en="About" data-es="Nosotros">About</a>
+    <a href="contact.html" class="nav-link active" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 spotlight"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Contact · Visit · Tow" data-es="Contacto · Visita · Grúa">Contact · Visit · Tow</div>
+      <h1 class="display text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
+          data-en="Three ways to reach us. All open now."
+          data-es="Tres formas de contactarnos. Todas abiertas.">
+        Three ways to reach us. <br/><span style="color:var(--accent)">All open now.</span>
+      </h1>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="py-12 md:py-20">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+
+    <!-- LEFT: form -->
+    <div class="md:col-span-7 reveal">
+      <div class="eyebrow" data-en="Send a message" data-es="Enviar mensaje">Send a message</div>
+      <h2 class="display text-3xl md:text-5xl mt-3 mb-10"
+          data-en="Tell us what your car needs."
+          data-es="Cuéntanos qué necesita tu carro.">
+        Tell us what your car needs.
+      </h2>
+      <form data-fake class="space-y-7">
+        <div class="grid md:grid-cols-2 gap-7">
+          <div>
+            <span class="label" data-en="Name" data-es="Nombre">Name</span>
+            <input class="input" required data-en-placeholder="Your full name" data-es-placeholder="Tu nombre completo" />
+          </div>
+          <div>
+            <span class="label" data-en="Phone" data-es="Teléfono">Phone</span>
+            <input class="input" type="tel" required placeholder="(631) 555-0123" />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-7">
+          <div>
+            <span class="label" data-en="Email" data-es="Email">Email</span>
+            <input class="input" type="email" data-en-placeholder="you@email.com" data-es-placeholder="tu@email.com" />
+          </div>
+          <div>
+            <span class="label" data-en="Vehicle" data-es="Vehículo">Vehicle</span>
+            <input class="input" data-en-placeholder="Year · Make · Model" data-es-placeholder="Año · Marca · Modelo" />
+          </div>
+        </div>
+        <div>
+          <span class="label" data-en="Service needed" data-es="Servicio">Service needed</span>
+          <select class="input" style="background:transparent;color:var(--text);">
+            <option style="background:#0c0c0d" data-en="Collision repair" data-es="Reparación de colisión">Collision repair</option>
+            <option style="background:#0c0c0d" data-en="Paint & body" data-es="Pintura y carrocería">Paint & body</option>
+            <option style="background:#0c0c0d" data-en="PPF / Ceramic" data-es="PPF / Cerámico">PPF / Ceramic</option>
+            <option style="background:#0c0c0d" data-en="Detailing" data-es="Detallado">Detailing</option>
+            <option style="background:#0c0c0d" data-en="Wraps / Vinyl" data-es="Vinilos">Wraps / Vinyl</option>
+            <option style="background:#0c0c0d" data-en="Mechanical / Tires" data-es="Mecánica / Llantas">Mechanical / Tires</option>
+            <option style="background:#0c0c0d" data-en="24/7 Towing" data-es="Grúa 24/7">24/7 Towing</option>
+            <option style="background:#0c0c0d" data-en="Other" data-es="Otro">Other</option>
+          </select>
+        </div>
+        <div>
+          <span class="label" data-en="What happened" data-es="Qué pasó">What happened</span>
+          <textarea class="input" rows="4" data-en-placeholder="A brief description of the damage or job. Insurance? Already filed a claim?" data-es-placeholder="Descripción breve del daño o trabajo. ¿Tienes seguro? ¿Ya hiciste el reclamo?"></textarea>
+        </div>
+        <div class="flex items-start gap-3 pt-2">
+          <input type="checkbox" required class="mt-1 accent-[var(--accent)]" id="consent" />
+          <label for="consent" class="text-white/55 text-sm" data-en="I agree to be contacted by Huntington Collision via phone, SMS or email." data-es="Acepto ser contactado por Huntington Collision por teléfono, SMS o email.">I agree to be contacted by Huntington Collision via phone, SMS or email.</label>
+        </div>
+        <button class="btn btn-solid"><span data-en="Send message" data-es="Enviar mensaje">Send message</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <div data-form-result class="hidden text-[var(--accent-2)] text-sm mono tracking-wide pt-1"></div>
+      </form>
+    </div>
+
+    <!-- RIGHT: info -->
+    <div class="md:col-span-5 space-y-6 reveal">
+      <a href="tel:+16314920123" class="card p-7 block hover:border-white/30 transition-colors group">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40" data-en="Call · 24/7" data-es="Llamar · 24/7">Call · 24/7</div>
+            <div class="display text-2xl md:text-3xl mt-2 group-hover:text-[var(--accent)] transition-colors">(631) 492-0123</div>
+            <div class="text-white/60 text-sm mt-2" data-en="Front desk, shop, and after-hours tow." data-es="Recepción, taller y grúa fuera de hora.">Front desk, shop, and after-hours tow.</div>
+          </div>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/30 group-hover:text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+      </a>
+
+      <a href="mailto:info@huntingtoncollision.com" class="card p-7 block hover:border-white/30 transition-colors group">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40" data-en="Email" data-es="Email">Email</div>
+            <div class="text-xl mt-2 text-white group-hover:text-[var(--accent)] transition-colors">info@huntingtoncollision.com</div>
+            <div class="text-white/60 text-sm mt-2" data-en="Photos welcome. We respond within 24h." data-es="Acepta fotos. Respondemos en menos de 24h.">Photos welcome. We respond within 24h.</div>
+          </div>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/30 group-hover:text-white"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 13l8-7H4zm0 12h16V8.24l-8 6.76-8-6.76V18z"/></svg>
+        </div>
+      </a>
+
+      <a href="https://maps.google.com/?q=99+E+Jericho+Turnpike+Huntington+Station+NY" target="_blank" class="card p-7 block hover:border-white/30 transition-colors group">
+        <div class="flex items-start justify-between">
+          <div>
+            <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40" data-en="Visit · Free coffee" data-es="Visítanos · Café gratis">Visit · Free coffee</div>
+            <div class="text-xl mt-2 text-white group-hover:text-[var(--accent)] transition-colors leading-tight">99 E. Jericho Turnpike<br/>Huntington Station, NY 11746</div>
+            <div class="text-white/60 text-sm mt-3" data-en="Parking out front. Walk-ins always welcome." data-es="Estacionamiento al frente. Sin cita siempre bienvenidos.">Parking out front. Walk-ins always welcome.</div>
+          </div>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/30 group-hover:text-white"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+      </a>
+
+      <div class="card p-7">
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40 mb-4" data-en="Hours" data-es="Horarios">Hours</div>
+        <ul class="text-white/75 text-sm space-y-2">
+          <li class="flex justify-between"><span data-en="Mon — Fri" data-es="Lun — Vie">Mon — Fri</span><span class="text-white/60">8:00 AM — 6:00 PM</span></li>
+          <li class="flex justify-between"><span data-en="Saturday" data-es="Sábado">Saturday</span><span class="text-white/60">8:00 AM — 2:00 PM</span></li>
+          <li class="flex justify-between"><span data-en="Sunday" data-es="Domingo">Sunday</span><span class="text-white/60" data-en="Closed (Tow only)" data-es="Cerrado (Solo grúa)">Closed (Tow only)</span></li>
+          <li class="flex justify-between pt-2 border-t border-white/[.06] mt-2"><span data-en="Towing" data-es="Grúa">Towing</span><span style="color:var(--accent)">24 / 7</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="py-12 md:py-20 border-t border-white/[.06]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-8">
+      <div class="eyebrow" data-en="Find us" data-es="Búscanos">Find us</div>
+      <h2 class="display text-3xl md:text-5xl mt-3" data-en="Right on Jericho." data-es="Justo en Jericho.">Right on Jericho.</h2>
+    </div>
+    <div class="card overflow-hidden reveal">
+      <iframe src="https://www.google.com/maps?q=99+E+Jericho+Turnpike,+Huntington+Station,+NY&output=embed" class="w-full" style="height:480px;border:0;filter:grayscale(.7) contrast(1.1) invert(.9) hue-rotate(180deg);" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="Need a tow right now?" data-es="¿Necesitas grúa ya?">Need a tow right now?</div>
+    <h2 class="display text-4xl md:text-6xl mt-4" data-en="One number. Anywhere on Long Island. 24/7." data-es="Un número. En cualquier parte de Long Island. 24/7.">One number. Anywhere on Long Island. 24/7.</h2>
+    <a href="tel:+16314920123" class="btn btn-solid mt-8 text-lg !py-5 !px-9">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      (631) 492-0123
+    </a>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.06] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl">Huntington<span style="color:var(--accent)">.</span></span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-white" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-white" data-en="Services" data-es="Servicios">Services</a>
+      <a href="gallery.html" class="hover:text-white" data-en="Gallery" data-es="Galería">Gallery</a>
+      <a href="about.html" class="hover:text-white" data-en="About" data-es="Nosotros">About</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+16314920123" class="btn-solid">Call</a>
+  <a href="https://maps.google.com/?q=99+E+Jericho+Turnpike+Huntington+Station+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Map" data-es="Mapa">Map</a>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>
