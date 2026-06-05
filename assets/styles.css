@@ -1,26 +1,28 @@
-/* Huntington Collision — Editorial Auto Magazine */
+/* Huntington Collision — Premium Gold & Black (Car- palette) */
 :root{
-  --bg:#0c0b0a;
-  --bg-1:#15130f;
-  --bg-2:#1d1a15;
-  --paper:#ebe3d3;
-  --paper-2:#c8bfac;
-  --line:rgba(235,227,211,.10);
-  --line-2:rgba(235,227,211,.22);
-  --line-h:rgba(235,227,211,.45);
-  --text:#ebe3d3;
-  --text-2:#a9a195;
-  --text-3:#75705f;
-  --ink:#0c0b0a;
+  --bg:#050505;
+  --bg-1:#0a0a0a;
+  --bg-2:#111111;
+  --paper:#f5f1ea;
+  --paper-2:#c9b88a;
+  --line:rgba(255,203,0,.12);
+  --line-2:rgba(255,203,0,.25);
+  --line-h:rgba(255,203,0,.45);
+  --text:#f5f1ea;
+  --text-2:#9a948a;
+  --text-3:#666666;
+  --ink:#050505;
   --oxblood:#8b1a1a;
-  --burnt:#c7501a;
-  --gold:#cda254;
-  --safety:#e7c64a;
-  --inspect:#3d8b5c;
+  --burnt:#C99A00;
+  --gold:#FFCB00;
+  --gold-soft:#FFE066;
+  --gold-deep:#C99A00;
+  --safety:#FFE066;
+  --inspect:#10b981;
   /* Legacy aliases */
   --accent:var(--gold);
-  --accent-2:var(--burnt);
-  --accent-glow:rgba(205,162,84,.35);
+  --accent-2:var(--gold-deep);
+  --accent-glow:rgba(255,203,0,.35);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--bg);}
@@ -47,7 +49,7 @@ body{font-family:'Inter','Newsreader',serif;background:var(--bg);color:var(--tex
 .btn-solid{background:var(--paper);color:var(--ink);}
 .btn-solid:hover{background:#fff;transform:translateY(-1px);}
 .btn-line{border:1px solid var(--line-2);color:var(--text);background:transparent;}
-.btn-line:hover{border-color:var(--paper);background:rgba(235,227,211,.04);}
+.btn-line:hover{border-color:var(--paper);background:rgba(245,241,234,.04);}
 .btn-ox{background:var(--oxblood);color:var(--paper);}
 .btn-ox:hover{background:#a32424;}
 
@@ -78,8 +80,8 @@ body{font-family:'Inter','Newsreader',serif;background:var(--bg);color:var(--tex
 
 /* Hero */
 .hero-img{filter:brightness(.55) contrast(1.1) saturate(.7) sepia(.05);}
-.hero-fade{background:linear-gradient(180deg,rgba(12,11,10,.2) 0%,rgba(12,11,10,.55) 55%,var(--bg) 100%);}
-.spotlight{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 25% 70%,rgba(199,80,26,.10) 0%,transparent 50%),radial-gradient(ellipse at 80% 30%,rgba(205,162,84,.07) 0%,transparent 50%);}
+.hero-fade{background:linear-gradient(180deg,rgba(5,5,5,.2) 0%,rgba(5,5,5,.55) 55%,var(--bg) 100%);}
+.spotlight{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 25% 70%,rgba(199,80,26,.10) 0%,transparent 50%),radial-gradient(ellipse at 80% 30%,rgba(255,203,0,.07) 0%,transparent 50%);}
 
 /* Marquee */
 .marquee{display:flex;animation:scroll 60s linear infinite;}
@@ -88,7 +90,7 @@ body{font-family:'Inter','Newsreader',serif;background:var(--bg);color:var(--tex
 
 /* Service rows (editorial table) */
 .svc-row{display:grid;grid-template-columns:80px 1fr auto;align-items:start;padding:1.75rem 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s;}
-.svc-row:hover{background:rgba(235,227,211,.02);padding-left:1rem;}
+.svc-row:hover{background:rgba(245,241,234,.02);padding-left:1rem;}
 .svc-row .num{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--gold);line-height:1;letter-spacing:-.03em;}
 .svc-row .arrow{font-family:'JetBrains Mono',monospace;color:var(--text-3);transition:color .3s,transform .3s;}
 .svc-row:hover .arrow{color:var(--paper);transform:translateX(6px);}
@@ -109,7 +111,7 @@ body{font-family:'Inter','Newsreader',serif;background:var(--bg);color:var(--tex
 .gal-item{overflow:hidden;position:relative;}
 .gal-item img{transition:transform .9s cubic-bezier(.16,1,.3,1),filter .5s;display:block;width:100%;height:100%;object-fit:cover;}
 .gal-item:hover img{transform:scale(1.05);filter:brightness(.9);}
-.gal-item .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(12,11,10,.85) 100%);display:flex;align-items:flex-end;padding:1.25rem;opacity:0;transition:opacity .4s;}
+.gal-item .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(5,5,5,.85) 100%);display:flex;align-items:flex-end;padding:1.25rem;opacity:0;transition:opacity .4s;}
 .gal-item:hover .overlay{opacity:1;}
 
 /* Before/After */
@@ -118,7 +120,7 @@ body{font-family:'Inter','Newsreader',serif;background:var(--bg);color:var(--tex
 .ba-after{clip-path:inset(0 50% 0 0);transition:clip-path .15s;}
 .ba-handle{position:absolute;top:0;bottom:0;width:2px;background:var(--paper);left:50%;transform:translateX(-50%);z-index:2;}
 .ba-handle::before{content:'⇿';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:600;}
-.ba-label{position:absolute;top:1rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;background:rgba(12,11,10,.7);color:var(--paper);padding:.35rem .7rem;backdrop-filter:blur(8px);}
+.ba-label{position:absolute;top:1rem;font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;background:rgba(5,5,5,.7);color:var(--paper);padding:.35rem .7rem;backdrop-filter:blur(8px);}
 
 /* Scroll progress */
 .scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--gold);z-index:99;width:0;transition:width .1s;}
@@ -148,7 +150,7 @@ textarea.input{resize:vertical;min-height:120px;}
 @media(min-width:768px){.mobile-cta{display:none;}}
 
 /* Modal */
-.modal-bg{position:fixed;inset:0;background:rgba(12,11,10,.92);backdrop-filter:blur(10px);z-index:200;display:none;align-items:center;justify-content:center;padding:1.5rem;}
+.modal-bg{position:fixed;inset:0;background:rgba(5,5,5,.92);backdrop-filter:blur(10px);z-index:200;display:none;align-items:center;justify-content:center;padding:1.5rem;}
 .modal-bg.open{display:flex;}
 .modal-card{background:var(--bg-1);border:1px solid var(--line-2);max-width:480px;width:100%;padding:2.5rem;position:relative;}
 .modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:0;color:var(--text-2);font-size:1.4rem;cursor:pointer;}
