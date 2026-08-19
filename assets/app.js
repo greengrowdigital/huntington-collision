@@ -7,6 +7,33 @@
   var root = document.documentElement;
   var fine = window.matchMedia('(hover: hover) and (pointer: fine)');
 
+  /* Safari anterior a 14 no tiene addEventListener en MediaQueryList: llamarlo
+     lanza TypeError y se lleva por delante todo el script que venga después. */
+  function onMediaChange(mq, fn) {
+    if (mq.addEventListener) mq.addEventListener('change', fn);
+    else if (mq.addListener) mq.addListener(fn);
+  }
+
+  /* Cada bloque se aísla: si uno falla en un navegador viejo, los demás
+     siguen funcionando en vez de caerse en cadena. */
+  function block(name, fn) {
+    try { fn(); }
+    catch (e) { if (window.console && console.warn) console.warn('[hc] ' + name, e); }
+  }
+
+  /* Las animaciones de entrada arrancan el contenido en opacity:0, así que
+     solo pueden activarse una vez que este archivo está corriendo de verdad.
+     Si no llega a ejecutarse, la clase nunca se pone y todo se ve tal cual:
+     una página sin animaciones, no una página en blanco. */
+  root.classList.add('anim');
+
+  /* Última red: si el observador no llega a marcar algo (navegador sin
+     IntersectionObserver, error posterior, render headless), se revela todo. */
+  window.setTimeout(function () {
+    var pending = document.querySelectorAll('.rise:not(.is-in), .rise-kids:not(.is-in), .hero:not(.is-in)');
+    for (var i = 0; i < pending.length; i++) pending[i].classList.add('is-in');
+  }, 2500);
+
   /* ----------------------------------------------------------------
      Loader — cortina de entrada, una vez por sesión.
      Nunca se queda pegado: hay un tope de tiempo pase lo que pase.
@@ -219,7 +246,9 @@
   /* ----------------------------------------------------------------
      Tilt 3D y brillo interno — solo con ratón fino y sin reduced-motion
      ---------------------------------------------------------------- */
-  if (fine.matches && !reduced.matches) {
+  // Pointer Events y las custom properties que usa el tilt son lo más nuevo
+  // de todo el archivo: si algo va a fallar en un navegador viejo, es esto.
+  if (fine.matches && !reduced.matches) block('tilt', function () {
     document.querySelectorAll('.tilt').forEach(function (card) {
       var inner = card.querySelector('.tilt-in') || card;
       var max = parseFloat(card.getAttribute('data-tilt')) || 6;
@@ -279,7 +308,7 @@
         btn.style.setProperty('--my', '0px');
       });
     });
-  }
+  });
 
   /* ----------------------------------------------------------------
      Nav móvil
@@ -321,7 +350,7 @@
       videos.forEach(function (v) { vio.observe(v); });
     }
 
-    reduced.addEventListener('change', function (e) { if (e.matches) stopAll(); });
+    onMediaChange(reduced, function (e) { if (e.matches) stopAll(); });
     document.addEventListener('visibilitychange', function () { if (document.hidden) stopAll(); });
   }
 

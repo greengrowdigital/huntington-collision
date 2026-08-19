@@ -20,8 +20,21 @@
 <link rel="stylesheet" href="assets/styles.css">
 
 <script>
-(function(){var d=document.documentElement;d.className+=' js';
-try{if(!sessionStorage.getItem('hc-seen'))d.className+=' loading';}catch(e){d.className+=' loading';}})();
+(function () {
+  var d = document.documentElement;
+  d.classList.add('js');
+  var show = true;
+  try { show = !sessionStorage.getItem('hc-seen'); } catch (e) {}
+  if (!show) return;
+  d.classList.add('loading');
+  // Si app.js no llega a ejecutarse (red, parseo, extensión), el loader
+  // no puede dejar la página en negro para siempre.
+  setTimeout(function () {
+    d.classList.remove('loading');
+    var l = document.querySelector('.loader');
+    if (l && l.parentNode) l.parentNode.removeChild(l);
+  }, 6000);
+})();
 </script>
 </head>
 <body>
