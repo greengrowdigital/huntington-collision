@@ -368,7 +368,9 @@ html.loading, html.loading body { overflow: hidden; }
 
 .nav-shell {
   max-width: var(--maxw); margin-inline: auto;
-  transition: margin var(--t-ui) var(--ease), padding var(--t-ui) var(--ease);
+  /* El descenso va por transform, no por margin: animar margin obliga a
+     recalcular layout en cada frame de la transición. */
+  transition: transform var(--t-ui) var(--ease);
 }
 .nav-in {
   display: flex; align-items: center; justify-content: space-between;
@@ -379,7 +381,9 @@ html.loading, html.loading body { overflow: hidden; }
   border: 1px solid transparent;
 }
 /* Al bajar, la barra se despega y se vuelve píldora */
-.nav.is-stuck .nav-shell { margin-top: .75rem; padding-inline: clamp(.75rem, 2vw, 1rem); }
+/* El estrechamiento es instantáneo y queda enmascarado por la aparición
+   del fondo; solo el descenso se anima. */
+.nav.is-stuck .nav-shell { transform: translateY(.75rem); padding-inline: clamp(.75rem, 2vw, 1rem); }
 .nav.is-stuck .nav-in {
   background: rgb(5 5 5 / .9);
   backdrop-filter: blur(20px) saturate(140%);
@@ -482,7 +486,7 @@ html.loading, html.loading body { overflow: hidden; }
   letter-spacing: .04em;
   padding: .75rem 0;
   border-bottom: 1px solid rgb(255 255 255 / .07);
-  transition: color var(--t-micro) ease, padding-left var(--t-micro) ease;
+  transition: color var(--t-micro) ease;
 }
 .nav-panel a:last-of-type { border-bottom: 0; }
 .nav-panel a:hover, .nav-panel a.active { color: var(--blue-soft); }
