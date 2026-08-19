@@ -12,8 +12,17 @@ HTML estático + CSS propio + JS vanilla. **Sin framework y sin Tailwind CDN**: 
 negocio local el LCP y el SEO son parte de la conversión, y la versión anterior cargaba
 ~400 KB bloqueantes desde un tercero.
 
-- **Fuentes**: Archivo (display + body, eje de anchura 62–125) y Martian Mono (datos).
-- **Paleta**: negro tintado + `#0157F9` muestreado del logo. Contrastes verificados en `DESIGN.md`.
+El lenguaje visual está alineado al de [The Car Guys](../../../webs-gaelalejandropty/Car-)
+por pedido del cliente: negro profundo, un solo acento, glass, cards elevadas con tilt 3D,
+botones píldora con *shine*, blobs difuminados y titulares cuya segunda línea va en serif
+itálica con degradado. El acento aquí es el **azul del logo**, no el dorado del Car-.
+
+- **Fuentes**: Syne (display), Fraunces itálica (acento), Inter (cuerpo), JetBrains Mono (datos).
+  Son las mismas del Car-, porque son las que producen ese look.
+- **Paleta**: `#050505` de fondo + `#0157F9` muestreado del logo con `palettegen`.
+- **Interacción**: tilt 3D en tarjetas, brillo interno que sigue al puntero *dentro* de la
+  tarjeta, botones magnéticos, contadores animados, parallax en los cierres, nav que se
+  vuelve píldora al bajar. Nada de esto toca el cursor del navegador.
 - **Bilingüe EN/ES**: diccionario en atributos `data-en` / `data-es`, persistido en `localStorage`.
 - **Idioma por defecto**: inglés. Solo arranca en español si la zona horaria del equipo
   apunta a un país hispanohablante (Puerto Rico cuenta como EE. UU.). Sin señal → inglés.

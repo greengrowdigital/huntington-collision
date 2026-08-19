@@ -5,9 +5,10 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   var root = document.documentElement;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)');
 
   /* ----------------------------------------------------------------
-     Loader — telón de entrada, una sola vez por sesión.
+     Loader — cortina de entrada, una vez por sesión.
      Nunca se queda pegado: hay un tope de tiempo pase lo que pase.
      ---------------------------------------------------------------- */
   (function loader() {
@@ -21,28 +22,21 @@
       el.classList.add('done');
       root.classList.remove('loading');
       try { sessionStorage.setItem('hc-seen', '1'); } catch (e) {}
-      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 900);
+      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 800);
     }
 
-    // Mínimo para que la barra se lea, máximo para no castigar conexiones lentas.
-    var MIN = reduced.matches ? 0 : 1250;
+    var MIN = reduced.matches ? 0 : 1300;
     var started = Date.now();
-
-    function finish() {
-      var waited = Date.now() - started;
-      setTimeout(close, Math.max(0, MIN - waited));
-    }
+    function finish() { setTimeout(close, Math.max(0, MIN - (Date.now() - started))); }
 
     if (document.readyState === 'complete') finish();
     else window.addEventListener('load', finish, { once: true });
 
-    // Red de seguridad: si `load` nunca llega (vídeo lento, red caída), sale igual.
-    setTimeout(close, 4000);
+    setTimeout(close, 4000); // red de seguridad
   })();
 
   /* ----------------------------------------------------------------
      i18n — EN/ES persistente
-     Los nodos llevan data-en / data-es (y variantes -html, -ph, -aria).
      ---------------------------------------------------------------- */
   var LANG_KEY = 'hc-lang';
 
@@ -64,9 +58,8 @@
     } catch (e) {}
 
     // 2. El negocio está en Long Island, así que inglés es el default.
-    //    Solo cambia si el reloj del equipo apunta a un país hispanohablante.
     //    No usamos navigator.language: alguien en Nueva York con el navegador
-    //    en español sigue siendo un cliente al que hay que recibir en inglés.
+    //    en español sigue siendo un cliente al que se recibe en inglés.
     try {
       var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
       if (tz && ES_ZONES.test(tz)) return 'es';
@@ -107,8 +100,24 @@
     btn.addEventListener('click', function () {
       lang = btn.getAttribute('data-lang');
       applyLang(lang);
+      splitWords(); // el titular cambió de idioma: rehacer el troceado
     });
   });
+
+  /* ----------------------------------------------------------------
+     Titular troceado en palabras, para que entren escalonadas
+     ---------------------------------------------------------------- */
+  function splitWords() {
+    document.querySelectorAll('[data-split]').forEach(function (el) {
+      var text = el.getAttribute('data-raw') || el.textContent;
+      el.setAttribute('data-raw', text);
+      el.innerHTML = text.split(/\s+/).map(function (w, i) {
+        return '<span class="word" style="transition-delay:' + (i * 55) + 'ms"><i style="transition-delay:' +
+               (i * 55) + 'ms">' + w + '</i></span>';
+      }).join(' ');
+    });
+  }
+  splitWords();
 
   /* ----------------------------------------------------------------
      Reveals — mejoran un default ya visible
@@ -125,11 +134,11 @@
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.06 });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
 
     revealTargets.forEach(function (el) { io.observe(el); });
 
-    // Red de seguridad: lo que ya está en pantalla al cargar entra de inmediato.
+    // Lo que ya está en pantalla al cargar entra de inmediato.
     requestAnimationFrame(function () {
       revealTargets.forEach(function (el) {
         if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-in');
@@ -138,27 +147,138 @@
   }
 
   /* ----------------------------------------------------------------
-     Progreso de scroll — transform, sin leer layout en cada frame
+     Contadores — animan una sola vez al entrar en pantalla
+     ---------------------------------------------------------------- */
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length) {
+    var runCount = function (el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var decimals = (el.getAttribute('data-decimals') | 0);
+      var suffix = el.getAttribute('data-suffix') || '';
+      if (reduced.matches) { el.textContent = target.toFixed(decimals) + suffix; return; }
+
+      var dur = 1400, t0 = null;
+      var tick = function (ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 4); // ease-out quart
+        el.textContent = (target * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      counters.forEach(runCount);
+    } else {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { runCount(e.target); cio.unobserve(e.target); }
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (el) { cio.observe(el); });
+    }
+  }
+
+  /* ----------------------------------------------------------------
+     Scroll: barra de progreso, nav pegajosa y parallax
      ---------------------------------------------------------------- */
   var bar = document.querySelector('.progress');
-  if (bar) {
-    var ticking = false;
-    var docH = 0;
+  var nav = document.querySelector('.nav');
+  var parallaxEls = reduced.matches ? [] : Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  var docH = 0, ticking = false;
 
-    function measure() {
-      docH = document.documentElement.scrollHeight - window.innerHeight;
+  function measure() { docH = document.documentElement.scrollHeight - window.innerHeight; }
+
+  function onScrollFrame() {
+    var y = window.scrollY;
+
+    if (bar) bar.style.transform = 'scaleX(' + (docH > 0 ? Math.min(y / docH, 1) : 0) + ')';
+    if (nav) nav.classList.toggle('is-stuck', y > 24);
+
+    for (var i = 0; i < parallaxEls.length; i++) {
+      var el = parallaxEls[i];
+      var speed = parseFloat(el.getAttribute('data-parallax')) || 0.15;
+      var box = el.getBoundingClientRect();
+      // Solo mover lo que se ve, y relativo al centro del viewport.
+      if (box.bottom > -200 && box.top < window.innerHeight + 200) {
+        var mid = box.top + box.height / 2 - window.innerHeight / 2;
+        el.style.setProperty('--par', (-mid * speed).toFixed(1) + 'px');
+      }
     }
-    function paint() {
-      var p = docH > 0 ? Math.min(window.scrollY / docH, 1) : 0;
-      bar.style.transform = 'scaleX(' + p + ')';
-      ticking = false;
-    }
-    measure();
-    window.addEventListener('resize', measure);
-    window.addEventListener('scroll', function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(paint); }
-    }, { passive: true });
-    paint();
+    ticking = false;
+  }
+
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScrollFrame); }
+  }, { passive: true });
+  onScrollFrame();
+
+  /* ----------------------------------------------------------------
+     Tilt 3D y brillo interno — solo con ratón fino y sin reduced-motion
+     ---------------------------------------------------------------- */
+  if (fine.matches && !reduced.matches) {
+    document.querySelectorAll('.tilt').forEach(function (card) {
+      var inner = card.querySelector('.tilt-in') || card;
+      var max = parseFloat(card.getAttribute('data-tilt')) || 6;
+      var frame = null;
+
+      card.addEventListener('pointermove', function (e) {
+        if (frame) return;
+        frame = requestAnimationFrame(function () {
+          var b = card.getBoundingClientRect();
+          var px = (e.clientX - b.left) / b.width;
+          var py = (e.clientY - b.top) / b.height;
+          inner.style.setProperty('--ry', ((px - 0.5) * max * 2).toFixed(2) + 'deg');
+          inner.style.setProperty('--rx', ((0.5 - py) * max * 2).toFixed(2) + 'deg');
+          card.style.setProperty('--px', (px * 100).toFixed(1) + '%');
+          card.style.setProperty('--py', (py * 100).toFixed(1) + '%');
+          frame = null;
+        });
+      });
+
+      card.addEventListener('pointerleave', function () {
+        inner.style.setProperty('--rx', '0deg');
+        inner.style.setProperty('--ry', '0deg');
+      });
+    });
+
+    // Brillo interno en elementos que no llevan tilt
+    document.querySelectorAll('.sheen:not(.tilt)').forEach(function (el) {
+      var frame = null;
+      el.addEventListener('pointermove', function (e) {
+        if (frame) return;
+        frame = requestAnimationFrame(function () {
+          var b = el.getBoundingClientRect();
+          el.style.setProperty('--px', (((e.clientX - b.left) / b.width) * 100).toFixed(1) + '%');
+          el.style.setProperty('--py', (((e.clientY - b.top) / b.height) * 100).toFixed(1) + '%');
+          frame = null;
+        });
+      });
+    });
+
+    // Botones magnéticos: desplazamiento corto, nunca tanto como para
+    // que el puntero pierda el objetivo.
+    document.querySelectorAll('.magnetic').forEach(function (btn) {
+      var frame = null;
+      btn.addEventListener('pointermove', function (e) {
+        if (frame) return;
+        frame = requestAnimationFrame(function () {
+          var b = btn.getBoundingClientRect();
+          var dx = (e.clientX - (b.left + b.width / 2)) / b.width;
+          var dy = (e.clientY - (b.top + b.height / 2)) / b.height;
+          btn.style.setProperty('--mx', (dx * 10).toFixed(1) + 'px');
+          btn.style.setProperty('--my', (dy * 10).toFixed(1) + 'px');
+          frame = null;
+        });
+      });
+      btn.addEventListener('pointerleave', function () {
+        btn.style.setProperty('--mx', '0px');
+        btn.style.setProperty('--my', '0px');
+      });
+    });
   }
 
   /* ----------------------------------------------------------------
@@ -183,10 +303,7 @@
      Vídeo: reproducir solo lo visible; póster bajo reduced-motion
      ---------------------------------------------------------------- */
   var videos = document.querySelectorAll('video[data-auto]');
-
-  function stopAll() {
-    videos.forEach(function (v) { v.pause(); });
-  }
+  function stopAll() { videos.forEach(function (v) { v.pause(); }); }
 
   if (videos.length) {
     if (reduced.matches) {
@@ -198,44 +315,14 @@
           if (e.isIntersecting) {
             var p = v.play();
             if (p && p.catch) p.catch(function () {});
-          } else {
-            v.pause();
-          }
+          } else { v.pause(); }
         });
       }, { threshold: 0.2 });
       videos.forEach(function (v) { vio.observe(v); });
     }
 
-    reduced.addEventListener('change', function (e) {
-      if (e.matches) stopAll();
-    });
-
-    // No gastar batería/datos en una pestaña oculta
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) stopAll();
-    });
-  }
-
-  /* ----------------------------------------------------------------
-     Servicios: la fila enfocada manda sobre la imagen
-     ---------------------------------------------------------------- */
-  var specRows = document.querySelectorAll('[data-spec]');
-  var specImgs = document.querySelectorAll('[data-spec-img]');
-  var specCap = document.querySelector('[data-spec-cap]');
-
-  if (specRows.length && specImgs.length) {
-    var showSpec = function (key, label) {
-      specImgs.forEach(function (img) {
-        img.classList.toggle('on', img.getAttribute('data-spec-img') === key);
-      });
-      if (specCap && label) specCap.textContent = label;
-    };
-    specRows.forEach(function (row) {
-      var key = row.getAttribute('data-spec');
-      var show = function () { showSpec(key, row.getAttribute('data-spec-label')); };
-      row.addEventListener('mouseenter', show);
-      row.addEventListener('focusin', show);
-    });
+    reduced.addEventListener('change', function (e) { if (e.matches) stopAll(); });
+    document.addEventListener('visibilitychange', function () { if (document.hidden) stopAll(); });
   }
 
   /* ----------------------------------------------------------------
@@ -255,7 +342,6 @@
       var first = card.querySelector(FOCUSABLE);
       if (first) setTimeout(function () { first.focus(); }, 60);
     }
-
     function closeModal() {
       modal.classList.remove('open');
       modal.setAttribute('aria-hidden', 'true');
@@ -292,10 +378,7 @@
      ---------------------------------------------------------------- */
   document.querySelectorAll('form[data-demo]').forEach(function (form) {
     var msg = form.querySelector('[data-form-msg]');
-
-    function errorNode(field) {
-      return form.querySelector('[data-err-for="' + field.name + '"]');
-    }
+    function errorNode(field) { return form.querySelector('[data-err-for="' + field.name + '"]'); }
 
     function validate(field) {
       var node = errorNode(field);
@@ -323,9 +406,7 @@
 
       var fields = Array.prototype.slice.call(form.querySelectorAll('input, textarea'));
       var firstBad = null;
-      fields.forEach(function (f) {
-        if (!validate(f) && !firstBad) firstBad = f;
-      });
+      fields.forEach(function (f) { if (!validate(f) && !firstBad) firstBad = f; });
       if (firstBad) { firstBad.focus(); return; }
 
       var btn = form.querySelector('button[type="submit"]');
