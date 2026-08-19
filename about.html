@@ -1,277 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About · Huntington Collision Center · Family Owned Since 2013</title>
-<meta name="description" content="Family-owned auto body shop on Long Island. Mike Sulek and his team have been straightening Huntington's cars on Jericho Turnpike since 2013." />
-<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
-<script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0C13">
+<title>About · Huntington Collision Center · Family-Owned Since 2013</title>
+<meta name="description" content="Family-owned auto body shop at 99 E. Jericho Turnpike, Huntington Station NY. Licensed since 2013, NY DMV 7127281. All insurance accepted, lifetime workmanship warranty, 24/7 towing.">
+<link rel="canonical" href="https://huntingtoncollision.com/about">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About · Huntington Collision Center">
+<meta property="og:description" content="Twelve years on Jericho Turnpike. Same family, same building, same crew signing every panel.">
+<meta property="og:image" content="https://huntingtoncollision.com/assets/media/photo/shop-front-lot.webp">
+<link rel="icon" type="image/png" href="assets/brand/logo-180.png">
+<link rel="apple-touch-icon" href="assets/brand/logo-180.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,200..600;1,6..72,200..600&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+
+<script>
+(function(){var d=document.documentElement;d.className+=' js';
+try{if(!sessionStorage.getItem('hc-seen'))d.className+=' loading';}catch(e){d.className+=' loading';}})();
+</script>
 </head>
 <body>
 
-<div class="loader">
-  <div class="loader-logo">
-    Huntington
-    <small>COLLISION · AUTO BODY QUARTERLY</small>
-  </div>
-  <div class="loader-bar"></div>
-</div>
+<a class="skip" href="#main" data-en="Skip to content" data-es="Ir al contenido">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
 
-<div class="grain"></div>
-<div class="scroll-progress"></div>
-
-<div class="hidden md:block border-b border-white/[.10]">
-  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between folio">
-    <div class="flex items-center gap-7">
-      <span>Issue №142 · May 2026</span>
-      <span>·</span>
-      <span>99 E. Jericho Tpke · Huntington Station, NY</span>
-    </div>
-    <div class="flex items-center gap-6">
-      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span data-en="Open · 8AM–6PM" data-es="Abierto · 8AM–6PM">Open · 8AM–6PM</span></span>
-      <a href="tel:+16314920123" class="hover:text-[var(--paper)]">(631) 492-0123</a>
-      <div class="lang-toggle flex items-center gap-1">
-        <button data-lang="en" class="px-2 py-1 hover:text-[var(--paper)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--paper)]">ES</button>
-      </div>
-    </div>
+<!-- ============ LOADER ============ -->
+<div class="loader" role="status"
+     aria-label="Loading Huntington Collision Center"
+     data-en-aria="Loading Huntington Collision Center"
+     data-es-aria="Cargando Huntington Collision Center">
+  <div class="loader-in">
+    <img class="loader-logo" src="assets/brand/logo.webp" alt="" width="138" height="138" aria-hidden="true">
+    <span class="loader-word" translate="no">Huntington Collision</span>
+    <span class="loader-bar" aria-hidden="true"><i></i></span>
   </div>
 </div>
 
-<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0c0b0a]/90 border-b border-white/[.10]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-10 py-5 grid grid-cols-3 items-center gap-6">
-    <div class="hidden md:flex items-center gap-7">
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand" aria-label="Huntington Collision Center, home">
+      <img src="assets/brand/logo.webp" alt="" width="34" height="34" aria-hidden="true">
+      <span class="brand-txt" translate="no">Huntington<small>Collision Center</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
       <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
       <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
-      <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
-    </div>
-    <a href="index.html" class="text-center col-start-1 md:col-start-2 col-span-2 md:col-span-1">
-      <span class="editorial text-2xl md:text-3xl tracking-tight">Huntington</span>
-      <span class="block folio text-[.55rem]" style="letter-spacing:.35em">COLLISION · EST. 2013</span>
-    </a>
-    <div class="hidden md:flex items-center gap-7 justify-end">
+      <a href="gallery.html" class="nav-link" data-en="Our Work" data-es="Trabajos">Our Work</a>
       <a href="about.html" class="nav-link active" data-en="About" data-es="Nosotros">About</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
-      <a href="#" data-open-quote class="btn btn-solid !py-2.5 !px-5 !text-[.66rem]" data-en="Estimate" data-es="Cotizar">Estimate</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a href="#" data-open-quote class="btn btn-primary" data-en="Free Estimate" data-es="Cotizar Gratis">Free Estimate</a>
+      <button type="button" id="burger" class="burger" aria-expanded="false" aria-controls="navPanel"
+              aria-label="Open menu" data-en-aria="Open menu" data-es-aria="Abrir menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
     </div>
-    <button id="menuBtn" class="md:hidden text-white p-2 col-start-3 justify-self-end" aria-label="Menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-    </button>
   </div>
-  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.10] px-6 py-5 flex flex-col gap-4">
-    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
-    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
-    <a href="gallery.html" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
-    <a href="about.html" class="nav-link active" data-en="About" data-es="Nosotros">About</a>
-    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  <div id="navPanel" class="nav-panel">
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" data-en="Services" data-es="Servicios">Services</a>
+    <a href="gallery.html" data-en="Our Work" data-es="Trabajos">Our Work</a>
+    <a href="about.html" class="active" data-en="About" data-es="Nosotros">About</a>
+    <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
   </div>
-</nav>
+</header>
 
-<!-- HERO HEADER -->
-<section class="relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-  <div class="absolute inset-0 spotlight"></div>
-  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="reveal">
-      <div class="eyebrow" data-en="About · The shop on Jericho" data-es="Nosotros · El taller en Jericho">About · The shop on Jericho</div>
-      <h1 class="display text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
-          data-en="Family run. Long Island raised."
-          data-es="Familiar. De Long Island.">
-        Family run. <br/><span style="color:var(--accent)">Long Island raised.</span>
-      </h1>
-    </div>
+<main id="main">
+
+<section class="page-head">
+  <div class="page-head-media" aria-hidden="true">
+    <img src="assets/media/photo/shop-front-lot.webp" alt="" width="1600" height="2134" fetchpriority="high" decoding="async">
+  </div>
+  <div class="wrap">
+    <nav class="crumbs mono" aria-label="Breadcrumb">
+      <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+      <span aria-hidden="true">/</span>
+      <span data-en="About" data-es="Nosotros">About</span>
+    </nav>
+    <h1 class="display h-1" style="max-width:15ch">
+      <span data-en="One building." data-es="Un solo taller.">One building.</span>
+      <span class="blue" data-en="One family. Twelve years." data-es="Una familia. Doce años.">One family. Twelve years.</span>
+    </h1>
+    <p class="lede" style="margin-top:1.4rem"
+       data-en="Huntington Collision Center has been at 99 E. Jericho Turnpike since 2013. The same people who write your estimate are the ones who pull the frame, spray the panel and hand you the keys."
+       data-es="Huntington Collision Center lleva en el 99 E. Jericho Turnpike desde 2013. La misma gente que escribe tu cotización es la que endereza el chasis, pinta el panel y te entrega las llaves.">
+      Huntington Collision Center has been at 99 E. Jericho Turnpike since 2013. The same people who write your estimate are the ones who pull the frame, spray the panel and hand you the keys.
+    </p>
   </div>
 </section>
 
-<!-- STORY -->
-<section class="py-12 md:py-20 border-t border-white/[.06]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
-    <div class="md:col-span-7 reveal">
-      <img src="https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?auto=format&fit=crop&w=1400&q=85" alt="Auto body shop interior" class="w-full aspect-[4/3] object-cover" />
-    </div>
-    <div class="md:col-span-5 reveal">
-      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--accent)" data-en="Our story" data-es="Nuestra historia">Our story</div>
-      <h2 class="display text-3xl md:text-4xl mt-4 leading-tight"
-          data-en="From a single bay to the busiest body shop on Jericho."
-          data-es="De un solo elevador al taller más activo de Jericho.">
-        From a single bay to the busiest body shop on Jericho.
-      </h2>
-      <div class="mt-6 space-y-4 text-white/70 leading-relaxed">
-        <p data-en="Mike Sulek opened Huntington Collision in 2013 with one frame rack, one paint gun and a deal with a friend's tow yard. He'd been working bodies on Long Island for fifteen years already — the deal was simple: take care of the car, take care of the customer, and pay the rent." data-es="Mike Sulek abrió Huntington Collision en 2013 con un solo rack de chasis, una pistola de pintura y un trato con la grúa de un amigo. Ya llevaba quince años trabajando carrocería en Long Island — el trato era simple: cuida el auto, cuida al cliente y paga la renta.">
-          Mike Sulek opened Huntington Collision in 2013 with one frame rack, one paint gun and a deal with a friend's tow yard. He'd been working bodies on Long Island for fifteen years already — the deal was simple: take care of the car, take care of the customer, and pay the rent.
+<!-- ============ HISTORIA ============ -->
+<section class="section" aria-labelledby="story-h">
+  <div class="wrap">
+    <div class="head-split rise">
+      <div>
+        <h2 id="story-h" class="display h-1" style="max-width:16ch">
+          <span data-en="Nothing here gets" data-es="Aquí nada se">Nothing here gets</span>
+          <span class="blue" data-en="sent somewhere else." data-es="manda a otro lado.">sent somewhere else.</span>
+        </h2>
+        <p class="lede" style="margin-top:1.5rem"
+           data-en="Plenty of shops on Long Island take your car, then sublet the paint to one place and the mechanical to another. You never find out who actually touched it. We built this shop the other way around: frame bench, prep bays, sealed paint booth and the detail room are all under this roof."
+           data-es="Muchos talleres en Long Island reciben tu carro y luego mandan la pintura a un lado y la mecánica a otro. Nunca te enteras de quién lo tocó. Este taller lo armamos al revés: banco de chasis, áreas de preparación, cabina de pintura sellada y sala de detallado, todo bajo este techo.">
+          Plenty of shops on Long Island take your car, then sublet the paint to one place and the mechanical to another. You never find out who actually touched it. We built this shop the other way around: frame bench, prep bays, sealed paint booth and the detail room are all under this roof.
         </p>
-        <p data-en="Twelve years later we still answer the phone, still write estimates by hand on the first visit, and still hand the keys back with the car detailed. Some things you don't outgrow." data-es="Doce años después seguimos contestando el teléfono, seguimos escribiendo cotizaciones a mano en la primera visita y seguimos entregando el auto detallado. Algunas cosas no se cambian.">
-          Twelve years later we still answer the phone, still write estimates by hand on the first visit, and still hand the keys back with the car detailed. Some things you don't outgrow.
+        <p class="lede" style="margin-top:1.2rem"
+           data-en="It also means when something is not right, there is one phone number to call and one person who answers for it."
+           data-es="También significa que cuando algo no queda bien, hay un solo número al que llamar y una sola persona que responde por ello.">
+          It also means when something is not right, there is one phone number to call and one person who answers for it.
         </p>
       </div>
+
+      <div class="tile" style="aspect-ratio:3/4">
+        <img src="assets/media/photo/m5-primer-bay.webp"
+             alt="A BMW M5 in bare primer parked under the shop lights, mid-repair" width="1600" height="2134" loading="lazy" decoding="async">
+        <span class="tile-cap" data-en="Mid-repair · the bay on a weekday" data-es="En reparación · el taller entre semana">Mid-repair · the bay on a weekday</span>
+      </div>
+    </div>
+
+    <p class="stat-line rise" style="max-width:32ch;margin-top:var(--gap-l)">
+      <span data-en-html="&lt;b class=&quot;num&quot;&gt;12&lt;/b&gt; years on Jericho Turnpike, &lt;b class=&quot;num&quot;&gt;8,200&lt;/b&gt; cars back on the road, and &lt;b class=&quot;num&quot;&gt;4.8&lt;/b&gt; stars across 127 reviews."
+            data-es-html="&lt;b class=&quot;num&quot;&gt;12&lt;/b&gt; años en Jericho Turnpike, &lt;b class=&quot;num&quot;&gt;8,200&lt;/b&gt; carros de vuelta en la calle, y &lt;b class=&quot;num&quot;&gt;4.8&lt;/b&gt; estrellas en 127 reseñas."><b class="num">12</b> years on Jericho Turnpike, <b class="num">8,200</b> cars back on the road, and <b class="num">4.8</b> stars across 127 reviews.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ CÓMO TRABAJAMOS ============ -->
+<section class="section" style="background:var(--void-deep)" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="head rise">
+      <h2 id="how-h" class="display h-1" data-en="How we work" data-es="Cómo trabajamos">How we work</h2>
+      <p class="lede"
+         data-en="Four things we do not bend on, whether the car is a work truck or an AMG."
+         data-es="Cuatro cosas que no negociamos, sea el carro una camioneta de trabajo o un AMG.">
+        Four things we do not bend on, whether the car is a work truck or an AMG.
+      </p>
+    </div>
+
+    <div class="steps rise-kids">
+      <div class="step" style="counter-increment:none">
+        <h3 class="display h-3" data-en="Factory procedure, not shortcuts" data-es="Procedimiento de fábrica, sin atajos">Factory procedure, not shortcuts</h3>
+        <p data-en="Structural work follows the manufacturer's repair procedure. If a panel is meant to be replaced rather than pulled, we replace it, and the estimate says so in writing." data-es="El trabajo estructural sigue el procedimiento de reparación del fabricante. Si un panel debe cambiarse en vez de enderezarse, lo cambiamos, y la cotización lo dice por escrito.">Structural work follows the manufacturer's repair procedure. If a panel is meant to be replaced rather than pulled, we replace it, and the estimate says so in writing.</p>
+      </div>
+      <div class="step" style="counter-increment:none">
+        <h3 class="display h-3" data-en="You see the car mid-job" data-es="Ves el carro a medio trabajo">You see the car mid-job</h3>
+        <p data-en="Progress photos as the work moves, not a two-week silence followed by an invoice. If the timeline slips, you hear it from us first." data-es="Fotos del avance conforme avanza el trabajo, no dos semanas de silencio y luego una factura. Si el tiempo se alarga, te enteras por nosotros primero.">Progress photos as the work moves, not a two-week silence followed by an invoice. If the timeline slips, you hear it from us first.</p>
+      </div>
+      <div class="step" style="counter-increment:none">
+        <h3 class="display h-3" data-en="Lifetime workmanship warranty" data-es="Garantía de por vida en mano de obra">Lifetime workmanship warranty</h3>
+        <p data-en="For as long as you own the vehicle. If our work fails, we fix it. That covers the labour and the finish, not the wear of a normal life on Long Island roads." data-es="Mientras seas dueño del vehículo. Si nuestro trabajo falla, lo arreglamos. Cubre la mano de obra y el acabado, no el desgaste normal de las carreteras de Long Island.">For as long as you own the vehicle. If our work fails, we fix it. That covers the labour and the finish, not the wear of a normal life on Long Island roads.</p>
+      </div>
+      <div class="step" style="counter-increment:none">
+        <h3 class="display h-3" data-en="Every car leaves detailed" data-es="Cada carro sale detallado">Every car leaves detailed</h3>
+        <p data-en="Washed, vacuumed and wiped down before pickup, at no charge, on a $400 bumper job or a $14,000 rebuild. It is the last thing you see, so it matters." data-es="Lavado, aspirado y repasado antes de la entrega, sin cargo, sea un bumper de $400 o una reconstrucción de $14,000. Es lo último que ves, así que importa.">Washed, vacuumed and wiped down before pickup, at no charge, on a $400 bumper job or a $14,000 rebuild. It is the last thing you see, so it matters.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="reveal mb-12">
-      <div class="eyebrow" data-en="How we work" data-es="Cómo trabajamos">How we work</div>
-      <h2 class="display text-4xl md:text-6xl mt-4 max-w-3xl"
-          data-en="Four things we don't compromise on."
-          data-es="Cuatro cosas en las que no transigimos.">
-        Four things we don't compromise on.
+<!-- ============ CREDENCIALES ============ -->
+<section class="section" aria-labelledby="cred-h">
+  <div class="wrap">
+    <div class="head-split rise">
+      <h2 id="cred-h" class="display h-2" data-en="The paperwork, for what it is worth" data-es="Los papeles, por lo que valen">The paperwork, for what it is worth</h2>
+      <p class="lede"
+         data-en="Licensed, registered and insured in New York State. Ask for any of it at the counter."
+         data-es="Licenciados, registrados y asegurados en el estado de Nueva York. Pide cualquiera de estos en el mostrador.">
+        Licensed, registered and insured in New York State. Ask for any of it at the counter.
+      </p>
+    </div>
+
+    <div class="panel rise">
+      <div class="info-list" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));display:grid;gap:2rem">
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <div>
+            <b data-en="NY DMV Repair Shop" data-es="Taller Registrado NY DMV">NY DMV Repair Shop</b>
+            <span class="num" translate="no">№ 7127281</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.4 9 8 10 4.6-1 8-5 8-10V6z"/></svg>
+          <div>
+            <b data-en="Established" data-es="Establecido">Established</b>
+            <span class="num">2013 · Huntington Station, NY</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+          <div>
+            <b data-en="Insurance" data-es="Seguros">Insurance</b>
+            <span data-en="All major carriers, direct billing" data-es="Todas las aseguradoras grandes, facturación directa">All major carriers, direct billing</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="m8.2 13.9-1.4 7 5.2-3.1 5.2 3.1-1.4-7"/></svg>
+          <div>
+            <b data-en="Warranty" data-es="Garantía">Warranty</b>
+            <span data-en="Lifetime on workmanship, in writing" data-es="De por vida en mano de obra, por escrito">Lifetime on workmanship, in writing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carriers rise" translate="no" style="margin-top:var(--gap-m)">
+      <div>GEICO</div><div>Allstate</div><div>Progressive</div>
+      <div>State Farm</div><div>USAA</div><div>Liberty Mutual</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="section-lg closer">
+  <div class="closer-media" aria-hidden="true">
+    <img src="assets/media/photo/shop-sign.webp" alt="" width="1600" height="2844" loading="lazy" decoding="async">
+  </div>
+  <div class="wrap-tight" style="text-align:center">
+    <div class="rise">
+      <h2 class="display h-1" style="max-width:18ch;margin-inline:auto">
+        <span data-en="Come see the shop before you leave a car in it." data-es="Ven a ver el taller antes de dejar un carro en él.">Come see the shop before you leave a car in it.</span>
       </h2>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 reveal-stagger">
-      <div class="card p-7">
-        <div class="step-num">01</div>
-        <div class="chrome-rule my-4"></div>
-        <h3 class="display text-xl mb-3" data-en="OEM-spec repair" data-es="Reparación OEM">OEM-spec repair</h3>
-        <p class="text-white/65 text-sm leading-relaxed" data-en="We follow the manufacturer's procedures, not the shortcut. Welds, sealers, primers — all to spec." data-es="Seguimos los procedimientos del fabricante, no el atajo. Soldaduras, selladores, primers — todo a especificación.">We follow the manufacturer's procedures, not the shortcut. Welds, sealers, primers — all to spec.</p>
-      </div>
-      <div class="card p-7">
-        <div class="step-num">02</div>
-        <div class="chrome-rule my-4"></div>
-        <h3 class="display text-xl mb-3" data-en="Honest estimate" data-es="Cotización honesta">Honest estimate</h3>
-        <p class="text-white/65 text-sm leading-relaxed" data-en="The number we write on day one is the number you pay on day done. If something changes mid-job, you hear from us first." data-es="El número que escribimos al inicio es el que pagas al final. Si algo cambia, te llamamos primero.">The number we write on day one is the number you pay on day done. If something changes mid-job, you hear from us first.</p>
-      </div>
-      <div class="card p-7">
-        <div class="step-num">03</div>
-        <div class="chrome-rule my-4"></div>
-        <h3 class="display text-xl mb-3" data-en="Direct with insurance" data-es="Directo con seguros">Direct with insurance</h3>
-        <p class="text-white/65 text-sm leading-relaxed" data-en="GEICO, Allstate, Progressive, State Farm, USAA, Liberty, Geico, Travelers — we file the photos and write the supplements ourselves." data-es="GEICO, Allstate, Progressive, State Farm, USAA, Liberty, Travelers — nosotros mandamos fotos y suplementos.">GEICO, Allstate, Progressive, State Farm, USAA, Liberty, Travelers — we file the photos and write the supplements ourselves.</p>
-      </div>
-      <div class="card p-7">
-        <div class="step-num">04</div>
-        <div class="chrome-rule my-4"></div>
-        <h3 class="display text-xl mb-3" data-en="Lifetime warranty" data-es="Garantía de por vida">Lifetime warranty</h3>
-        <p class="text-white/65 text-sm leading-relaxed" data-en="Workmanship on collision repairs is guaranteed for as long as you own the vehicle. We mean it." data-es="La mano de obra en reparaciones está garantizada mientras seas dueño del auto. Lo decimos en serio.">Workmanship on collision repairs is guaranteed for as long as you own the vehicle. We mean it.</p>
+      <p class="lede" style="margin:1.5rem auto 0"
+         data-en="Walk in during business hours and ask for a look at the floor. We will show you the booth, the bench and whatever is being worked on that day."
+         data-es="Pásate en horario de trabajo y pide ver el taller. Te mostramos la cabina, el banco y lo que se esté trabajando ese día.">
+        Walk in during business hours and ask for a look at the floor. We will show you the booth, the bench and whatever is being worked on that day.
+      </p>
+      <div class="hero-cta" style="justify-content:center">
+        <a href="contact.html" class="btn btn-primary btn-lg" data-en="Directions &amp; Hours" data-es="Cómo Llegar y Horario">Directions &amp; Hours</a>
+        <a href="tel:+16314920123" class="btn btn-ghost btn-lg num">(631)&nbsp;492-0123</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
-<section class="py-20 md:py-28 border-t border-white/[.06]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="reveal mb-12">
-      <div class="eyebrow" data-en="The crew" data-es="El equipo">The crew</div>
-      <h2 class="display text-4xl md:text-6xl mt-4" data-en="The same faces, every visit." data-es="Las mismas caras, cada visita.">The same faces, every visit.</h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6 md:gap-8 reveal-stagger">
-      <div class="card">
-        <div class="aspect-[3/4] bg-[#141416] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=85" alt="Mike Sulek" class="w-full h-full object-cover" style="filter:grayscale(.4) contrast(1.05);" />
-        </div>
-        <div class="p-6">
-          <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Owner · Founder" data-es="Dueño · Fundador">Owner · Founder</div>
-          <h3 class="display text-2xl mt-2">Mike Sulek</h3>
-          <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="Frame and structural. Twenty-seven years in body work — fifteen of them on Jericho." data-es="Chasis y estructura. Veintisiete años en carrocería — quince de ellos en Jericho.">Frame and structural. Twenty-seven years in body work — fifteen of them on Jericho.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="aspect-[3/4] bg-[#141416] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85" alt="Paint tech" class="w-full h-full object-cover" style="filter:grayscale(.4) contrast(1.05);" />
-        </div>
-        <div class="p-6">
-          <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Lead Painter" data-es="Pintor Jefe">Lead Painter</div>
-          <h3 class="display text-2xl mt-2">Carlos M.</h3>
-          <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="PPG-certified, color match wizard. Has blended panels on every major German marque." data-es="Certificado PPG, mago del color. Ha mezclado paneles en todas las marcas alemanas grandes.">PPG-certified, color match wizard. Has blended panels on every major German marque.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="aspect-[3/4] bg-[#141416] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=900&q=85" alt="Detail tech" class="w-full h-full object-cover" style="filter:grayscale(.4) contrast(1.05);" />
-        </div>
-        <div class="p-6">
-          <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Detail & Coating" data-es="Detallado y Cerámico">Detail & Coating</div>
-          <h3 class="display text-2xl mt-2">Anthony R.</h3>
-          <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="Paint correction and ceramic specialist. Detail certifications from Gtechniq, IGL and CarPro." data-es="Especialista en corrección y cerámico. Certificaciones de Gtechniq, IGL y CarPro.">Paint correction and ceramic specialist. Detail certifications from Gtechniq, IGL and CarPro.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
-<!-- NUMBERS -->
-<section class="py-20 md:py-28 border-t border-white/[.06] bg-[#0a0a0a]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="reveal mb-12 md:mb-16">
-      <div class="eyebrow" data-en="By the numbers" data-es="En números">By the numbers</div>
-      <h2 class="display text-4xl md:text-6xl mt-4" data-en="A decade on Jericho." data-es="Una década en Jericho.">A decade on Jericho.</h2>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 reveal-stagger">
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
       <div>
-        <div class="display text-5xl md:text-7xl">12<span style="color:var(--accent)">y</span></div>
-        <div class="eyebrow mt-3" data-en="On Jericho Turnpike" data-es="En Jericho Turnpike">On Jericho Turnpike</div>
+        <img class="foot-logo" src="assets/brand/logo.webp" alt="Huntington Collision Center" width="46" height="46">
+        <p class="dim" style="font-size:.875rem;max-width:38ch;line-height:1.7"
+           data-en="Family-owned auto body shop on Jericho Turnpike since 2013. Collision, paint, detailing, ceramic, wraps, tint and lighting. All insurance accepted. 24/7 towing across Long Island."
+           data-es="Taller de carrocería familiar en Jericho Turnpike desde 2013. Colisión, pintura, detallado, cerámico, vinilos, polarizado e iluminación. Todos los seguros aceptados. Grúa 24/7 en Long Island.">
+          Family-owned auto body shop on Jericho Turnpike since 2013. Collision, paint, detailing, ceramic, wraps, tint and lighting. All insurance accepted. 24/7 towing across Long Island.
+        </p>
+      </div>
+      <nav aria-label="Footer">
+        <h3 data-en="Pages" data-es="Páginas">Pages</h3>
+        <div class="foot-links">
+          <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+          <a href="services.html" data-en="Services" data-es="Servicios">Services</a>
+          <a href="gallery.html" data-en="Our Work" data-es="Trabajos">Our Work</a>
+          <a href="about.html" data-en="About" data-es="Nosotros">About</a>
+          <a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+        </div>
+      </nav>
+      <div>
+        <h3 data-en="Hours" data-es="Horario">Hours</h3>
+        <p class="dim" style="font-size:.875rem;line-height:1.9">
+          <span data-en="Mon–Fri · 8AM–6PM" data-es="Lun–Vie · 8AM–6PM">Mon–Fri · 8AM–6PM</span><br>
+          <span data-en="Saturday · 9AM–2PM" data-es="Sábado · 9AM–2PM">Saturday · 9AM–2PM</span><br>
+          <span data-en="Sunday · Closed" data-es="Domingo · Cerrado">Sunday · Closed</span><br>
+          <span class="blue" data-en="Towing · 24/7" data-es="Grúa · 24/7">Towing · 24/7</span>
+        </p>
       </div>
       <div>
-        <div class="display text-5xl md:text-7xl">8,200<span style="color:var(--accent)">+</span></div>
-        <div class="eyebrow mt-3" data-en="Cars repaired" data-es="Autos reparados">Cars repaired</div>
-      </div>
-      <div>
-        <div class="display text-5xl md:text-7xl">4.8<span style="color:var(--accent)">★</span></div>
-        <div class="eyebrow mt-3" data-en="127 reviews" data-es="127 reseñas">127 reviews</div>
-      </div>
-      <div>
-        <div class="display text-5xl md:text-7xl">24/7</div>
-        <div class="eyebrow mt-3" data-en="Tow service" data-es="Servicio de grúa">Tow service</div>
+        <h3 data-en="Find us" data-es="Encuéntranos">Find us</h3>
+        <address>
+          <a href="https://maps.google.com/?q=99+E+Jericho+Turnpike+Huntington+Station+NY+11746" target="_blank" rel="noopener">
+            99 E. Jericho Turnpike<br>Huntington Station, NY 11746
+          </a><br><br>
+          <a href="tel:+16314920123" class="num">(631) 492-0123</a><br>
+          <a href="mailto:aahuntingtoncollision@gmail.com">aahuntingtoncollision@gmail.com</a><br>
+          <a href="https://www.instagram.com/huntington_collision/" target="_blank" rel="noopener" translate="no">@huntington_collision</a>
+        </address>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="py-20 md:py-32 border-t border-white/[.06]">
-  <div class="max-w-3xl mx-auto px-6 text-center reveal">
-    <div class="eyebrow" data-en="Come say hi" data-es="Pásate a saludar">Come say hi</div>
-    <h2 class="display text-4xl md:text-6xl mt-4" data-en="The garage is open. So is the coffee." data-es="El taller está abierto. El café también.">The garage is open. So is the coffee.</h2>
-    <p class="mt-5 text-white/70" data-en="Walk-ins welcome. Estimates always free." data-es="Sin cita necesaria. Cotización siempre gratis.">Walk-ins welcome. Estimates always free.</p>
-    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="contact.html" class="btn btn-solid" data-en="Plan your visit" data-es="Visítanos">Plan your visit</a>
-      <a href="tel:+16314920123" class="btn btn-line">(631) 492-0123</a>
-    </div>
-  </div>
-</section>
-
-<footer class="border-t border-white/[.06] py-14">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-    <div class="flex items-center gap-3">
-      <span class="display text-2xl">Huntington<span style="color:var(--accent)">.</span></span>
-      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
-    </div>
-    <div class="flex items-center gap-6 text-sm text-white/60">
-      <a href="index.html" class="hover:text-white" data-en="Home" data-es="Inicio">Home</a>
-      <a href="services.html" class="hover:text-white" data-en="Services" data-es="Servicios">Services</a>
-      <a href="gallery.html" class="hover:text-white" data-en="Gallery" data-es="Galería">Gallery</a>
-      <a href="contact.html" class="hover:text-white" data-en="Contact" data-es="Contacto">Contact</a>
+    <div class="foot-base">
+      <span class="mono">© <span data-year>2026</span> Huntington Collision Center Inc.</span>
+      <span class="mono" translate="no">NY DMV № 7127281 · BBB File</span>
     </div>
   </div>
 </footer>
 
 <div class="mobile-cta">
-  <a href="tel:+16314920123" class="btn-solid">Call</a>
-  <a href="contact.html" class="btn-line border border-white/15 text-white" data-en="Visit" data-es="Visítanos">Visit</a>
+  <a href="tel:+16314920123">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span data-en="Call" data-es="Llamar">Call</span>
+  </a>
+  <a href="#" data-open-quote data-en="Free Estimate" data-es="Cotizar Gratis">Free Estimate</a>
 </div>
 
-<div id="quoteModal" class="modal-bg">
+<div id="quoteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-h" aria-hidden="true">
   <div class="modal-card">
-    <button class="modal-close" data-close-quote>×</button>
-    <div class="eyebrow" data-en="Free estimate" data-es="Cotización gratis">Free estimate</div>
-    <h3 class="display text-2xl mt-3 mb-6" data-en="Send a few photos. We'll take it from there." data-es="Envía unas fotos. Nosotros nos encargamos.">Send a few photos. We'll take it from there.</h3>
-    <form data-fake class="space-y-5">
-      <div><span class="label" data-en="Name" data-es="Nombre">Name</span><input class="input" required /></div>
-      <div class="grid grid-cols-2 gap-5">
-        <div><span class="label" data-en="Phone" data-es="Teléfono">Phone</span><input class="input" type="tel" required /></div>
-        <div><span class="label" data-en="Vehicle" data-es="Vehículo">Vehicle</span><input class="input" /></div>
+    <div class="modal-head">
+      <button type="button" class="modal-close" data-close-quote aria-label="Close" data-en-aria="Close" data-es-aria="Cerrar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <h2 id="modal-h" class="display h-3" data-en="Free estimate, same day" data-es="Cotización gratis, el mismo día">Free estimate, same day</h2>
+      <p class="form-note" style="margin-top:.6rem"
+         data-en="Tell us what happened. We’ll call you back within one business hour. If it’s urgent, just ring (631) 492-0123."
+         data-es="Cuéntanos qué pasó. Te llamamos en menos de una hora hábil. Si es urgente, marca el (631) 492-0123.">
+        Tell us what happened. We’ll call you back within one business hour. If it’s urgent, just ring (631) 492-0123.
+      </p>
+    </div>
+    <form data-demo novalidate>
+      <label class="field">
+        <span class="field-label" data-en="Name" data-es="Nombre">Name</span>
+        <input class="input" name="name" type="text" autocomplete="name" required
+               placeholder="Jane Doe…" data-en-ph="Jane Doe…" data-es-ph="Juana Pérez…">
+        <span class="err" data-err-for="name" role="alert" hidden></span>
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label" data-en="Phone" data-es="Teléfono">Phone</span>
+          <input class="input num" name="phone" type="tel" inputmode="tel" autocomplete="tel" required
+                 spellcheck="false" placeholder="(631) 555-0142…">
+          <span class="err" data-err-for="phone" role="alert" hidden></span>
+        </label>
+        <label class="field">
+          <span class="field-label" data-en="Vehicle" data-es="Vehículo">Vehicle</span>
+          <input class="input" name="vehicle" type="text" autocomplete="off" spellcheck="false"
+                 placeholder="2019 BMW 540i…">
+        </label>
       </div>
-      <div><span class="label" data-en="What happened" data-es="Qué pasó">What happened</span><textarea class="input" rows="3"></textarea></div>
-      <button class="btn btn-solid w-full" data-en="Send" data-es="Enviar">Send</button>
-      <div data-form-result class="hidden text-[var(--accent-2)] text-sm mono tracking-wide pt-2"></div>
+      <label class="field">
+        <span class="field-label" data-en="What happened" data-es="Qué pasó">What happened</span>
+        <textarea class="input" name="detail" rows="3"
+                  placeholder="Rear-ended on Jericho, bumper and trunk…"
+                  data-en-ph="Rear-ended on Jericho, bumper and trunk…"
+                  data-es-ph="Me chocaron por atrás en Jericho, bumper y baúl…"></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-lg" style="width:100%"
+              data-en="Send &amp; Get My Estimate" data-es="Enviar y Recibir Cotización">Send &amp; Get My Estimate</button>
+      <div class="form-msg" data-form-msg role="status" aria-live="polite" hidden></div>
+      <p class="form-note" style="margin-top:1rem"
+         data-en="Demo form: it doesn’t send yet. Call (631) 492-0123 to reach the shop today."
+         data-es="Formulario de demostración: todavía no envía. Llama al (631) 492-0123 para hablar con el taller hoy.">
+        Demo form: it doesn’t send yet. Call (631) 492-0123 to reach the shop today.
+      </p>
     </form>
   </div>
 </div>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

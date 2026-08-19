@@ -1,8 +1,12 @@
 node_modules/
 .vercel/
+.vercel
 .DS_Store
 *.log
 .env
 .env.local
 
-.vercel
+# Material original del cliente (~96 MB). Se queda en disco como respaldo;
+# lo que sirve la web son las versiones optimizadas de assets/media/.
+public/_unzipped/
+public/*.zip

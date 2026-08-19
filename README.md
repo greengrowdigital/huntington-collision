@@ -1,23 +1,73 @@
-# Huntington Collision Center · Demo
+# Huntington Collision Center
 
-Demo de landing multi-página para Huntington Collision Center (99 E. Jericho Tpke, Huntington Station, NY).
+Landing multi-página para el taller de colisión y detailing de 99 E. Jericho Turnpike,
+Huntington Station, NY. Revamp completo (2026-08-19) sobre la demo editorial anterior.
+
+Ver [`DESIGN.md`](DESIGN.md) para el sistema de diseño y [`PRODUCT.md`](PRODUCT.md) para
+a quién sirve cada página.
 
 ## Stack
 
-- HTML estático multi-página
-- Tailwind CSS via CDN
-- Google Fonts: Inter + Bricolage Grotesque + JetBrains Mono
-- Vanilla JS para animaciones (IntersectionObserver, scroll progress, before/after slider, modal, i18n)
-- Bilingüe EN/ES con localStorage persistente
-- Listo para Vercel (`vercel.json` incluido, `cleanUrls: true`)
+HTML estático + CSS propio + JS vanilla. **Sin framework y sin Tailwind CDN**: para un
+negocio local el LCP y el SEO son parte de la conversión, y la versión anterior cargaba
+~400 KB bloqueantes desde un tercero.
+
+- **Fuentes**: Archivo (display + body, eje de anchura 62–125) y Martian Mono (datos).
+- **Paleta**: negro tintado + `#0157F9` muestreado del logo. Contrastes verificados en `DESIGN.md`.
+- **Bilingüe EN/ES**: diccionario en atributos `data-en` / `data-es`, persistido en `localStorage`.
+- **Idioma por defecto**: inglés. Solo arranca en español si la zona horaria del equipo
+  apunta a un país hispanohablante (Puerto Rico cuenta como EE. UU.). Sin señal → inglés.
 
 ## Páginas
 
-- `index.html` — Hero, servicios destacados, proceso, before/after, reviews, CTA
-- `services.html` — Catálogo completo (colisión, pintura, PPF/cerámico, detail, wraps, mecánica)
-- `gallery.html` — 3 sliders before/after + grid de fotos del taller
-- `about.html` — Historia, valores, equipo, números
-- `contact.html` — Formulario, info de contacto, mapa embebido
+| Ruta | Contenido |
+|---|---|
+| `index.html` | Hero, urgencia (grúa), servicios con precio, aseguradoras, video del taller, proceso, reseñas |
+| `services.html` | Catálogo completo con precios y tiempos reales, agrupado en 3 bloques |
+| `gallery.html` | 13 videos verticales del taller + 12 fotos |
+| `about.html` | Historia, forma de trabajar, credenciales |
+| `contact.html` | Formulario, datos, mapa |
+
+## Assets
+
+Todo el material es **real, del cliente**. Nada de stock.
+
+- `assets/media/photo/` — 12 fotos en WebP, dos tamaños (`@sm` para móvil)
+- `assets/media/video/` — 20 clips MP4 + póster WebP de cada uno
+- `assets/brand/` — logo en WebP y PNG
+
+Los originales viven en `public/` y están gitignoreados (~96 MB).
+
+> ⚠️ **Los 20 videos se grabaron con el teléfono en vertical.** Siete de ellos reportan
+> `1024x576` en el contenedor pero traen `rotation=-90` en metadata: su formato real es
+> 576×1024. Si se reprocesan, **no forzar dimensiones** — dejar que ffmpeg auto-rote y
+> limitar solo el ancho:
+> ```
+> ffmpeg -i in.mp4 -an -c:v libx264 -crf 28 -vf "scale='min(720,iw)':-2" out.mp4
+> ```
+> Forzar `scale=1024:576` estira el frame y deforma el vídeo.
+
+Por eso el hero usa una **foto** de fondo (nítida a lo ancho) y muestra el vídeo en un
+panel vertical a su formato nativo, en vez de estirarlo a fondo apaisado.
+
+## Detalles de implementación
+
+- **Loader**: cortina con el logo, una sola vez por sesión (`sessionStorage`). Solo existe
+  con JS y tiene tope de 4 s, así que nunca se queda pegado.
+- **Motion**: los reveals mejoran un default ya visible. Sin JS la página se lee completa.
+  Todo respeta `prefers-reduced-motion`.
+- **Video**: se reproduce solo lo visible; se pausa fuera de viewport, con la pestaña
+  oculta y bajo `prefers-reduced-motion` (queda el póster).
+- **Modal**: foco atrapado, `Escape`, clic en backdrop, foco devuelto al disparador.
+
+## Pendiente antes de producción
+
+1. **Formularios**: son `data-demo`, muestran éxito sin enviar. Conectar a n8n / Formspree.
+2. **Reseñas**: los tres testimonios son de la demo anterior, sin verificar. Reemplazar
+   por reseñas reales de Google antes de publicar.
+3. **Métricas**: `12 años`, `8,200 carros`, `4.8★ / 127 reseñas` vienen de la demo previa.
+   Confirmar con el cliente.
+4. **Pagos y citas**: pendiente conectar Square (ver conversación con el equipo).
 
 ## Deploy
 
@@ -25,17 +75,12 @@ Demo de landing multi-página para Huntington Collision Center (99 E. Jericho Tp
 vercel --prod
 ```
 
-## Notas
-
-- Las imágenes son de Unsplash como placeholder. Cuando estén disponibles las fotos reales del taller / clientes, reemplazar URLs en `index.html`, `gallery.html` y `about.html`.
-- El form de contacto y el modal son `data-fake` — muestran un mensaje de éxito sin enviar realmente. Conectar a n8n/Formspree/etc cuando se ponga en producción.
-- Sin variables de entorno requeridas.
+`vercel.json` ya trae `cleanUrls`. Sin variables de entorno.
 
 ## Negocio
 
-- **Owner**: Mike Sulek
-- **Phone**: (631) 492-0123
-- **Address**: 99 E. Jericho Turnpike, Huntington Station, NY 11746
-- **Instagram**: @huntington_collision
-- **Established**: 2013 (BBB File 2015)
-- **Insurance**: All major carriers (GEICO, Allstate, Progressive, State Farm, USAA, Liberty)
+- **Dirección**: 99 E. Jericho Turnpike, Huntington Station, NY 11746
+- **Teléfono**: (631) 492-0123
+- **Correo**: aahuntingtoncollision@gmail.com
+- **Instagram**: [@huntington_collision](https://www.instagram.com/huntington_collision/)
+- **Desde**: 2013 · NY DMV № 7127281
