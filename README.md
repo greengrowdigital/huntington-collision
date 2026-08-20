@@ -81,10 +81,22 @@ panel vertical a su formato nativo, en vez de estirarlo a fondo apaisado.
 ## Deploy
 
 ```
+node scripts/stamp-assets.mjs   # obligatorio si tocaste CSS o JS
 vercel --prod
 ```
 
 `vercel.json` ya trae `cleanUrls`. Sin variables de entorno.
+
+> ⚠️ **Tras cambiar `assets/styles.css` o `assets/app.js`, corre `scripts/stamp-assets.mjs`**
+> antes de desplegar. Sella cada archivo con un hash de su contenido en la URL
+> (`styles.css?v=68b55d2a`).
+>
+> Sin eso, quien ya visitó el sitio se queda con la copia guardada y ve el HTML
+> nuevo contra el CSS viejo, o sea una página sin estilos. Pasó en agosto de 2026:
+> `vercel.json` servía todo `/assets` como `immutable` por un año, así que los
+> iPhone que habían entrado antes nunca volvían a pedir la hoja de estilos.
+> Ahora CSS y JS van con `must-revalidate` y las imágenes siguen `immutable`,
+> que es lo correcto para ellas.
 
 ## Negocio
 
