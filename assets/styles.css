@@ -548,11 +548,13 @@ html.loading, html.loading body { overflow: hidden; }
   0%, 100% { transform: scale(1.05); }
   50%      { transform: scale(1.12); }
 }
+/* El velo se concentra a la izquierda, donde va el texto, y suelta el lado
+   derecho para que el carro se vea. Antes lo tapaba entero. */
 .hero-scrim {
   position: absolute; inset: 0; z-index: -2;
   background:
-    linear-gradient(to bottom, rgb(5 5 5 / .45) 0%, rgb(5 5 5 / .55) 45%, var(--black) 100%),
-    linear-gradient(to right, var(--black) 0%, rgb(5 5 5 / .45) 55%, transparent 100%);
+    linear-gradient(to bottom, rgb(5 5 5 / .3) 0%, rgb(5 5 5 / .38) 55%, var(--black) 100%),
+    linear-gradient(to right, rgb(5 5 5 / .93) 0%, rgb(5 5 5 / .62) 34%, rgb(5 5 5 / .12) 68%, transparent 100%);
 }
 .hero-stripes { position: absolute; inset: 0; z-index: -1; opacity: .06; }
 
