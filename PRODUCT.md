@@ -6,7 +6,7 @@ Sitio de captación para un taller de colisión y detailing familiar en Huntingt
 Long Island. No vende online: convierte visitas en **estimados gratis** y **llamadas**.
 
 - **Register**: brand (el diseño ES el producto — landing de negocio local)
-- **Owner**: Mike Sulek · Est. 2013 · NY DMV № 7127281
+- **Owner**: Mike Sulek · Est. 2013 · NY DMV № 7134012
 - **Dirección**: 99 E. Jericho Turnpike, Huntington Station, NY 11746
 - **Teléfono**: (631) 492-0123 · **IG**: @huntington_collision
 

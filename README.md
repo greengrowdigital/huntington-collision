@@ -33,7 +33,7 @@ itálica con degradado. El acento aquí es el **azul del logo**, no el dorado de
 |---|---|
 | `index.html` | Hero, urgencia (grúa), servicios con precio, aseguradoras, video del taller, proceso, reseñas |
 | `services.html` | Catálogo completo con precios y tiempos reales, agrupado en 3 bloques |
-| `gallery.html` | 13 videos verticales del taller + 12 fotos |
+| `gallery.html` | 18 videos verticales + 32 fotos, agrupadas por tipo de trabajo |
 | `about.html` | Historia, forma de trabajar, credenciales |
 | `contact.html` | Formulario, datos, mapa |
 
@@ -41,8 +41,13 @@ itálica con degradado. El acento aquí es el **azul del logo**, no el dorado de
 
 Todo el material es **real, del cliente**. Nada de stock.
 
-- `assets/media/photo/` — 12 fotos en WebP, dos tamaños (`@sm` para móvil)
-- `assets/media/video/` — 20 clips MP4 + póster WebP de cada uno
+**El nombre del archivo dice para qué servicio es** (`towing-flatbed`, `detail-escalade`,
+`starlight-headliner`). No es cosmético: en la primera pasada las fotos se repartieron
+por composición y quedó un carro chocado ilustrando "detailing" y ningún camión en
+"towing". Al cambiar una, respeta el emparejamiento.
+
+- `assets/media/photo/` — 35 fotos en WebP, dos tamaños (`@sm` para móvil), nombradas por servicio
+- `assets/media/video/` — 25 clips MP4 + póster WebP de cada uno
 - `assets/brand/` — logo en WebP y PNG
 
 Los originales viven en `public/` y están gitignoreados (~96 MB).
@@ -104,4 +109,4 @@ vercel --prod
 - **Teléfono**: (631) 492-0123
 - **Correo**: aahuntingtoncollision@gmail.com
 - **Instagram**: [@huntington_collision](https://www.instagram.com/huntington_collision/)
-- **Desde**: 2013 · NY DMV № 7127281
+- **Desde**: 2013 · NY DMV № 7134012
